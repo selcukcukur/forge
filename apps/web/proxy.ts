@@ -22,7 +22,7 @@ export const config = {
 }
 
 /**
- * Root middleware for handling all incoming requests
+ * Root proxy for handling all incoming requests
  *
  * **Parameters**
  * - `request` — Next.js incoming request object (used for request inspection and manipulation)
