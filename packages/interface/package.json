@@ -57,7 +57,7 @@
 
   "exports"           : {
     "."               : "./src/index.tsx",
-    "./poox.css"      : "./src/presets/globals.css"
+    "./globals.css"   : "./src/presets/globals.css"
   },
 
   "publishConfig"     : {
