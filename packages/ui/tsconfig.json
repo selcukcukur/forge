@@ -1,9 +1,9 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
-  "compilerOptions": {
+  "extends"         : "@selcukcukur/presets/react-config",
+  "compilerOptions" : {
     "outDir": "dist",
     "strictNullChecks": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include"         : ["src"],
+  "exclude"         : ["node_modules", "dist"]
 }

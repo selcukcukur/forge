@@ -1,0 +1,11 @@
+{
+  "extends"         : "@selcukcukur/presets/react-config",
+  "compilerOptions" : {
+    "baseUrl"   : ".",
+    "paths"     : {
+      "@selcukcukur/presets" : ["src"]
+    }
+  },
+  "include"         : ["."],
+  "exclude"         : ["dist", "build", "node_modules"]
+}

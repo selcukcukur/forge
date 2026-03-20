@@ -9,6 +9,7 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "@selcukcukur/presets"                 : "workspace:*",
     "prettier": "^3.7.4",
     "turbo": "^2.8.20",
     "typescript": "5.9.2"
