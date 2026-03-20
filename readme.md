@@ -1,7 +1,7 @@
 <b align="center">
   
   [![Framework](https://img.shields.io/static/v1?message=Next.js&style=for-the-badge&logo=nextdotjs&labelColor=5865F2&color=4f5bdb&logoColor=white&label=Framework)](https://nextjs.org)
-  [![Language](https://img.shields.io/static/v1?message=TypeScript&style=for-the-badge&logo=typescript&labelColor=25D366&color=20bd5b&logoColor=white&label=Language)](https://github.com/sponsors/selcukcukur)
+  [![Language](https://img.shields.io/static/v1?message=TS&style=for-the-badge&logo=typescript&labelColor=25D366&color=20bd5b&logoColor=white&label=Language)](https://github.com/sponsors/selcukcukur)
   [![Interface](https://img.shields.io/static/v1?message=Radix&style=for-the-badge&logo=xstate&labelColor=eb6a3b&color=cc5c33&logoColor=white&label=Interface)](https://docs.devexpress.com/WindowsForms/7874/winforms-controls?v=22.2)
   [![License](https://img.shields.io/static/v1?message=MIT&style=for-the-badge&logo=opensourceinitiative&labelColor=1886c9&color=0A66C2&logoColor=white&label=License)](https://github.com/sponsors/selcukcukur)
   [![Sponsor](https://img.shields.io/github/sponsors/selcukcukur?style=for-the-badge&logo=github&labelColor=161717&color=0f0f0f&logoColor=white&label=Sponsors)](https://github.com/sponsors/selcukcukur)
