@@ -29,6 +29,7 @@
   },
 
   "dependencies"      : {
+    "@selcukcukur/interface"  : "workspace:*",
     "next"                    : "catalog:base",
     "react"                   : "catalog:base",
     "react-dom"               : "catalog:base"

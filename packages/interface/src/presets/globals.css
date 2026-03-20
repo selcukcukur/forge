@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------------------------
+* Tailwind (Core)
+* ---------------------------------------------------------------------------- */
+@import "tailwindcss";                        /* Core utility classes */
+@import "tw-animate-css";                     /* Animation utility classes */
+
+/* ------------------------------------------------------------------------------
+* Tailwind (Plugins)
+* ---------------------------------------------------------------------------- */
+@plugin "@tailwindcss/forms";                 /* Form element resets and styling */
+@plugin "@tailwindcss/typography";            /* Prose classes for rich text */
+
+/* ------------------------------------------------------------------------------
+* Tailwind (Sources)
+* ---------------------------------------------------------------------------- */
+@source "../../../apps/**/*/*.{ts,tsx}";      /* Application Components */
+@source "../../../**/*.{ts,tsx}";             /* Monorepo Components */
+@source "../**/*.{ts,tsx}";                   /* Interface Components */
+
+/* ------------------------------------------------------------------------------
+* Theme (Variants)
+* ---------------------------------------------------------------------------- */
+@custom-variant light (&:where(.light, .light *));
+@custom-variant dark (&:where(.dark, .dark *));
