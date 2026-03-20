@@ -2,14 +2,14 @@ import { type NextFetchEvent, type NextRequest, NextResponse } from "next/server
 
 import {
   webProxy,
-} from "@/library/proxy"
+} from "@library/proxy"
 
 import {
   WEB_HOSTNAMES,
   proxyLog
 } from "@workspace/utility"
 
-import type { RequestContext } from "@/library/proxy/utility"
+import type { RequestContext } from "@library/proxy/utility"
 
 /**
  * Type definition for a proxy function used in the proxy layer

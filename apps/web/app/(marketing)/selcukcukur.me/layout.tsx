@@ -4,10 +4,10 @@ import type { Metadata } from "next"
 import { createMetadata } from "@workspace/utility"
 
 // Document
-import Document from "@/interface/document"
+import Document from "@interface/document"
 
 // Layout
-import WebShell from "@/interface/layout/web-shell"
+import WebShell from "@interface/layout/web-shell"
 
 /**
  * Generated metadata for the entire web application

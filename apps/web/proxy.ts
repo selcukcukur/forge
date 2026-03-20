@@ -3,7 +3,7 @@ import {
   type NextRequest
 } from "next/server"
 
-import { parse, resolveProxy } from "@/library/proxy/utility"
+import { parse, resolveProxy } from "@library/proxy/utility"
 
 /** Proxy configuration */
 export const config = {

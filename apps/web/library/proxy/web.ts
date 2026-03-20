@@ -6,7 +6,7 @@ import {
 
 import {
   type RequestContext
-} from "@/library/proxy/utility"
+} from "@library/proxy/utility"
 
 /**
  * Web middleware for handling web domain requests

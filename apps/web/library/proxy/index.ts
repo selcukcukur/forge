@@ -1,1 +1,1 @@
-export { webProxy } from "@/library/proxy/web"
+export { webProxy } from "@library/proxy/web"
