@@ -4,14 +4,13 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3000",
+    "dev"               : "next dev --hostname selcukcukur.dev --experimental-https --experimental-https-key ./certificate/selcukcukur-key.pem --experimental-https-cert ./certificate/selcukcukur.pem --turbopack --port 443",
     "build": "next build",
     "start": "next start",
     "lint": "eslint --max-warnings 0",
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
     "next": "16.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
