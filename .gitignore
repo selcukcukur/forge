@@ -1,38 +1,88 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# Dependencies
-node_modules
-.pnp
+# Ignore : Dependencies
+node_modules/
+.pnp/
 .pnp.js
 
-# Local env files
+# Ignore : Environment
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!*.env.example
+next-env.d.ts
 
-# Testing
-coverage
+# Ignore : Debug
+*.log
+*.log*
+*.trace
 
-# Turbo
-.turbo
-
-# Vercel
-.vercel
-
-# Build Outputs
-.next/
+# Ignore : Outputs
+dist/
+build/
 out/
-build
-dist
+.swc/
+.cache/
+.temp/
+.tmp/
+*.tsbuildinfo
 
+# Ignore : IDE
+.idea/
+.vscode/
+.fleet/
+*.sublime-workspace
+*.sublime-project
 
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Ignore : Testing
+coverage/
+test-results/
+jest.config.js
+*.snap
 
-# Misc
+# Ignore : Frameworks & Platforms
+.next/
+.nuxt/
+.vercel/
+.turbo/
+
+# Ignore : CI/CD & Deployment
 .DS_Store
 *.pem
+*.key
+*.crt
+*.pub
+*.ndjson
+*.csv
+*.sqlite
+*.db
+*.tinyb
+.venv
+*.lockb
+
+# Ignore : Vendors & Generated
+contentlayer/
+.contentlayer/
+.content-collections/
+.react-email/
+generated/
+gen/
+types/generated.ts
+
+# Ignore : Monorepo & Workspace
+packages/*/dist/
+packages/*/build/
+packages/*/src/prisma
+apps/*/dist/
+apps/*/build/
+apps/*/.next/
+apps/*/.turbo/
+apps/*/coverage/
+
+# Ignore : OS & Misc
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.swp
+*.swo
+*.bak
+*.tmp
+.vercel
