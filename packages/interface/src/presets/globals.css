@@ -33,3 +33,4 @@
 * ---------------------------------------------------------------------------- */
 @import "./general/responsive.css";
 @import "./general/typography.css";
+@import "./general/variable.css";
