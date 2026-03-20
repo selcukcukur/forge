@@ -1,0 +1,11 @@
+{
+  "extends"         : "@workspace/presets/react-config",
+  "compilerOptions" : {
+    "baseUrl" : ".",
+    "paths"   : {
+      "@workspace/utility" : ["src"]
+    }
+  },
+  "include"         : ["."],
+  "exclude"         : ["dist", "build", "node_modules"]
+}
