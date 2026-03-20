@@ -1,5 +1,5 @@
 {
-  "extends"         : "@selcukcukur/presets/next-config",
+  "extends"         : "@workspace/presets/next-config",
   "compilerOptions" : {
     "baseUrl"   : ".",
     "paths"     : {

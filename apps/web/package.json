@@ -29,13 +29,13 @@
   },
 
   "dependencies"      : {
-    "@selcukcukur/interface"  : "workspace:*",
+    "@workspace/interface"    : "workspace:*",
     "next"                    : "catalog:base",
     "react"                   : "catalog:base",
     "react-dom"               : "catalog:base"
   },
   "devDependencies"   : {
-    "@selcukcukur/presets"    : "workspace:*",
+    "@workspace/presets"      : "workspace:*",
     "@types/node"             : "catalog:type",
     "@types/react"            : "catalog:type",
     "@types/react-dom"        : "catalog:type",

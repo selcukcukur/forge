@@ -20,7 +20,7 @@ importers:
 
   .:
     devDependencies:
-      '@selcukcukur/presets':
+      '@workspace/presets':
         specifier: workspace:*
         version: link:packages/presets
       eslint:
@@ -47,7 +47,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@selcukcukur/interface':
+      '@workspace/interface':
         specifier: workspace:*
         version: link:../../packages/interface
       next:
@@ -60,7 +60,7 @@ importers:
         specifier: ^19.2.4
         version: 19.2.4(react@19.2.4)
     devDependencies:
-      '@selcukcukur/presets':
+      '@workspace/presets':
         specifier: workspace:*
         version: link:../../packages/presets
       '@types/node':
@@ -78,7 +78,7 @@ importers:
 
   packages/interface:
     dependencies:
-      '@selcukcukur/presets':
+      '@workspace/presets':
         specifier: workspace:*
         version: link:../presets
       class-variance-authority:

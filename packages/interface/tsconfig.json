@@ -1,9 +1,9 @@
 {
-  "extends"         : "@selcukcukur/presets/react-config",
+  "extends"         : "@workspace/presets/react-config",
   "compilerOptions" : {
     "baseUrl" : ".",
     "paths"   : {
-      "@selcukcukur/interface" : ["src"]
+      "@workspace/interface" : ["src"]
     }
   },
   "include"         : ["."],

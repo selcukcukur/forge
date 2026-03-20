@@ -1,6 +1,6 @@
 {
   "private"           : true,
-  "name"              : "@selcukcukur/presets",
+  "name"              : "@workspace/presets",
   "description"       : "",
   "keywords"          : ["typescript", "eslint", "eslint-config", "eslint-preset", "code-style", "linting", "type-safe", "shared-config", "modular", "teardown-safe", "semantic", "onboarding-friendly", "developer-experience"],
   "license"           : "MIT",

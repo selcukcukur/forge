@@ -1,4 +1,4 @@
-import { config } from "@selcukcukur/presets/react-eslint"
+import { config } from "@workspace/presets/react-eslint"
 
 /** @type {import("eslint").Linter.Config} */
 export default config
