@@ -30,6 +30,7 @@
 
   "dependencies"      : {
     "@workspace/interface"    : "workspace:*",
+    "@workspace/utility"      : "workspace:*",
     "next"                    : "catalog:base",
     "react"                   : "catalog:base",
     "react-dom"               : "catalog:base"

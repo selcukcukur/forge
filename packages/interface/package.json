@@ -57,6 +57,7 @@
 
   "exports"           : {
     "."               : "./src/index.tsx",
+    "./fonts"         : "./src/presets/fonts/index.ts",
     "./globals.css"   : "./src/presets/globals.css"
   },
 

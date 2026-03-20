@@ -50,6 +50,9 @@ importers:
       '@workspace/interface':
         specifier: workspace:*
         version: link:../../packages/interface
+      '@workspace/utility':
+        specifier: workspace:*
+        version: link:../../packages/utility
       next:
         specifier: ^16.2.0
         version: 16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)

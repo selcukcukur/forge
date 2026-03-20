@@ -16,7 +16,7 @@
  * console.log("Current application name:", APP_NAME)
  * ```
  */
-export const APP_NAME: string = process.env.NEXT_PUBLIC_APP_NAME || "scode"
+export const APP_NAME: string = process.env.NEXT_PUBLIC_APP_NAME || "Forge"
 
 /**
  * The current environment the app is running in
