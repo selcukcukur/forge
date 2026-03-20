@@ -1,6 +1,6 @@
 {
   "$schema"           : "https://json.schemastore.org/tsconfig",
-  "extends"           : "@workspace/presets/base-config",
+  "extends"           : "./base.json",
   "compilerOptions"   : {
     "plugins"           : [{ "name": "next" }],
     "module"            : "ESNext",
