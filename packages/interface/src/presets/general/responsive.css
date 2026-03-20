@@ -1,0 +1,55 @@
+@theme {
+  /* Breakpoint :: Media */
+  --breakpoint-3xs: 20rem; /* 320px */
+  --breakpoint-2xs: 26rem; /* 416px */
+  --breakpoint-xs: 32rem; /* 512px */
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-2xl: 96rem; /* 1536px */
+
+  /* Breakpoint :: Custom */
+  --breakpoint-sc: 96rem; /* 1280px */
+
+  /* Breakpoint :: Container */
+  --container-3xs: 16rem; /* 256px */
+  --container-2xs: 18rem; /* 288px */
+  --container-xs: 20rem; /* 320px */
+  --container-sm: 24rem; /* 384px */
+  --container-md: 28rem; /* 448px */
+  --container-lg: 32rem; /* 512px */
+  --container-xl: 36rem; /* 576px */
+  --container-2xl: 42rem; /* 672px */
+  --container-3xl: 48rem; /* 768px */
+  --container-4xl: 56rem; /* 896px */
+  --container-5xl: 64rem; /* 1024px */
+  --container-6xl: 72rem; /* 1152px */
+  --container-7xl: 80rem; /* 1280px */
+
+  /* Breakpoint :: Spacing */
+  --spacing: 0.25rem;
+
+  --spacing-px: 0.25rem;
+  --spacing-2x: 0.5rem;
+  --spacing-3x: 0.75rem;
+  --spacing-4x: 1rem;
+  --spacing-6x: 1.5rem;
+  --spacing-8x: 2rem;
+  --spacing-10x: 2.5rem;
+  --spacing-16x: 4rem;
+  --spacing-24x: 6rem;
+  --spacing-32x: 8rem;
+  --spacing-48x: 12rem;
+  --spacing-64x: 16rem;
+
+  /* Breakpoint :: Spacing (Context) */
+  --spacing-small: 2rem;
+  --spacing-medium: 2.5rem;
+  --spacing-large: 3rem;
+
+  /* Breakpoint :: Spacing (Gap) */
+  --spacing-gap: 1.5rem;
+  --spacing-gap-half: 0.75rem;
+  --spacing-gap-quarter: 0.5rem;
+}
