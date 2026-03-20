@@ -1,6 +1,6 @@
 {
   "$schema"           : "https://json.schemastore.org/tsconfig",
-  "extends"           : "@selcukukur/presets/base-config",
+  "extends"           : "@workspace/presets/base-config",
   "compilerOptions"   : {
     "jsx": "react-jsx"
   }
