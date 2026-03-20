@@ -1,3 +1,65 @@
+# Define which folders are included in the monorepo workspace
 packages:
-  - "apps/*"
-  - "packages/*"
+  - "apps/*"          # Include all projects inside the "apps" folder
+  - "packages/*"      # Include all projects inside the "packages" folder
+
+# Define reusable catalogs for dependency ranges
+catalogs:
+  base:
+    next: ^16.2.0
+    react: ^19.2.4
+    react-dom: ^19.2.4
+    typescript: ^5.9.3
+
+  type:
+    '@types/node': ^25.5.0
+    '@types/react': ^19.2.14
+    '@types/react-dom': ^19.2.3
+
+# Define dependencies that must always be built from source
+onlyBuiltDependencies:
+  - '@parcel/watcher'     # File system watcher used by Parcel bundler
+  - '@prisma/client'      # Prisma client library for database access
+  - '@prisma/engines'     # Prisma query engines required for runtime
+  - '@swc/core'           # SWC compiler core (used for fast JS/TS compilation)
+  - '@tsparticles/engine' # Engine for particle animations (tsparticles)
+  - better-sqlite3        # SQLite3 database library with native bindings
+  - esbuild               # Fast JavaScript bundler and minifier
+  - less                  # CSS preprocessor (Less)
+  - msw                   # Mock Service Worker for API testing
+  - prisma                # Prisma ORM main package
+  - protobufjs            # Protocol Buffers implementation in JavaScript
+  - sharp                 # High-performance image processing library
+  - workerd               # Worker runtime (used by Cloudflare Workers)
+  - sqlite3               # SQLite3 database library with native bindings
+
+# Define dependency overrides to enforce specific versions or catalog references
+overrides:
+  '@types/node': "catalog:type"
+  '@types/react': "catalog:type"
+  '@types/react-dom': "catalog:type"
+  eslint: "^10.1.0"
+  zod: "^4.3.6"
+  next: "catalog:base"
+  react: "catalog:base"
+  react-dom: "catalog:base"
+  typescript: "catalog:base"
+  baseline-browser-mapping: "^2.10.8"
+
+# Prevent dependency versions from being downgraded
+trustPolicy: no-downgrade
+
+# Ignore trust policy after 43,200 minutes (30 days)
+trustPolicyIgnoreAfter: 43200
+
+# Automatically install peer dependencies when required
+autoInstallPeers: true
+
+# Automatically link local workspace packages instead of installing duplicates
+linkWorkspacePackages: true
+
+# Allow installation at workspace root without warnings
+ignoreWorkspaceRootCheck: true
+
+# Allow using the newest package releases immediately (no waiting period)
+minimumReleaseAge: 0
