@@ -4,9 +4,6 @@ import type { Metadata } from "next"
 // Metadata
 import { createMetadata } from "@workspace/utility"
 
-// Document
-import Document from "@/interface/document"
-
 /**
  * Generated metadata for the entire application
  */
@@ -22,9 +19,5 @@ export async function generateMetadata(): Promise<Metadata> {
  * - `children` - The root component of the application
  */
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return (
-    <Document suppress={true}>
-    {children}
-    </Document>
-  )
+  return children
 }
