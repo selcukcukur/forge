@@ -1,0 +1,41 @@
+/* Custom scrollbar styling to improve appearance of overflow areas */
+@layer base {
+  /* Base scrollbar styles */
+  .sc-scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: #d1d5db #ffffff;
+  }
+  .sc-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .sc-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .sc-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 10px;
+  }
+}
+
+/* Utility to hide scrollbar completely */
+@utility scrollbar-hide {
+  /* Hide scrollbar in Firefox */
+  scrollbar-width: none;
+
+  /* Hide scrollbar in Safari and Chrome */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Utility to restore default scrollbar appearance */
+@utility scrollbar-default {
+  /* Restore default scrollbar in Firefox */
+  scrollbar-width: auto;
+
+  /* Restore default scrollbar in Safari and Chrome */
+  &::-webkit-scrollbar {
+    display: block;
+  }
+}
