@@ -8,7 +8,7 @@ import type { ReactNode } from "react"
  */
 export default function WebShell({ children }: { children: ReactNode }) {
   return (
-    <main className="relative min-h-screen overflow-hidden scanlines">
+    <main className="relative min-h-screen overflow-hidden">
       {children}
     </main>
   )
