@@ -27,6 +27,7 @@
 * Core (Variants)
 * ---------------------------------------------------------------------------- */
 @import "./utility/animate.css";
+@import "./utility/optimize.css";
 @import "./utility/radius.css";
 @import "./utility/scroll.css";
 @import "./utility/variant.css";
@@ -38,31 +39,3 @@
 @import "./general/responsive.css";
 @import "./general/typography.css";
 @import "./general/variable.css";
-
-/* Refined scanline effect - more subtle */
-.lines::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 3px,
-    oklch(0 0 0 / 0.015) 3px,
-    oklch(0 0 0 / 0.015) 6px
-  );
-  pointer-events: none;
-  z-index: 100;
-}
-
-body {
-  @apply bg-background text-foreground;
-  /* Ensure smooth scrolling on mobile */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Enable hardware acceleration for better mobile performance */
-  transform: translateZ(0);
-  will-change: auto;
-  /* Prevent unwanted zoom on input focus for iOS */
-  font-size: 16px;
-}
