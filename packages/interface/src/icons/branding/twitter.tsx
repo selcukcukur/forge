@@ -6,6 +6,7 @@ export function Twitter(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       viewBox="0 0 24 24"
+      fill="currentColor"
       {...props}
     >
       <title>X</title>

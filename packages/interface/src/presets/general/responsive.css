@@ -12,7 +12,7 @@
   /* Breakpoint :: Custom */
   --breakpoint-sc: 96rem; /* 1280px */
 
-  /* Breakpoint :: Container */
+  /* Container :: Media */
   --container-3xs: 16rem; /* 256px */
   --container-2xs: 18rem; /* 288px */
   --container-xs: 20rem; /* 320px */
@@ -26,6 +26,9 @@
   --container-5xl: 64rem; /* 1024px */
   --container-6xl: 72rem; /* 1152px */
   --container-7xl: 80rem; /* 1280px */
+
+  /* Container :: Custom */
+  --container-sc: 96rem; /* 1280px */
 
   /* Breakpoint :: Spacing */
   --spacing: 0.25rem;

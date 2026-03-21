@@ -11,5 +11,22 @@ export { Progressable, type ScrollProgressProps } from "./components/layout/prog
 export { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./components/layout/resizable"
 export { Scrollable, ScrollableBar } from "./components/layout/scrollable"
 
+// Navigation
+export { Navigation } from "./components/navigation/navigation"
+export { NavigationMobile } from "./components/navigation/navigation-mobile"
+export {
+  NavigationMenu,
+  NavigationMenuChevron,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuViewport,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger
+} from "./components/navigation/navigation-primitive"
+
+// Separator
+export { Separator } from "./components/separator/separator"
+
 // General
 export { ClientOnly } from "./components/client-only"

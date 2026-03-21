@@ -33,7 +33,9 @@
     "@workspace/utility"      : "workspace:*",
     "next"                    : "catalog:base",
     "react"                   : "catalog:base",
-    "react-dom"               : "catalog:base"
+    "react-dom"               : "catalog:base",
+    "lucide-react"            : "^0.577.0",
+    "jotai"                   : "^2.18.1"
   },
   "devDependencies"   : {
     "@workspace/presets"      : "workspace:*",

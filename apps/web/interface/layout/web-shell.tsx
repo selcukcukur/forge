@@ -1,5 +1,7 @@
 import type { ReactNode } from "react"
 
+import { Header } from "@interface/layout/section/header/header"
+
 /**
  * Web shell component for the web application
  *
@@ -8,8 +10,14 @@ import type { ReactNode } from "react"
  */
 export default function WebShell({ children }: { children: ReactNode }) {
   return (
-    <main className="relative min-h-screen overflow-hidden">
-      {children}
+    <main className="relative min-h-screen overflow-hidden lines">
+      <div className="relative z-10">
+        <Header />
+
+        <div className="w-full">
+          {children}
+        </div>
+      </div>
     </main>
   )
 }
