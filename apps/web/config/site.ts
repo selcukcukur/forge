@@ -1,10 +1,13 @@
 import type { SocialAccount } from "@library/type/site"
 
 import {
+  Facebook,
   Github,
   Twitter,
+  YouTube,
   Linkedin
 } from "@workspace/interface/icons"
+import {Instagram, Mail, Rss} from "lucide-react";
 
 /**
  * Company social media accounts list
@@ -31,9 +34,9 @@ import {
  */
 export const socialAccounts: SocialAccount[] = [
   {
-    name: "Github",
-    icon: Github,
-    href: "https://github.com/selcukcukur",
+    name: "Facebook",
+    icon: Facebook,
+    href: "https://facebook.com/selcukcukur",
   },
   {
     name: "X (Twitter)",
@@ -41,8 +44,33 @@ export const socialAccounts: SocialAccount[] = [
     href: "https://x.com/selcukcukur",
   },
   {
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://instagram.com/selcukcukur",
+  },
+  {
+    name: "YouTube",
+    icon: YouTube,
+    href: "https://youtube.com/@selcukcukur",
+  },
+  {
     name: "Linkedin",
     icon: Linkedin,
     href: "https://www.linkedin.com/in/selcukcukur",
+  },
+  {
+    name: "Github",
+    icon: Github,
+    href: "https://github.com/selcukcukur",
+  },
+  {
+    name: "E-Mail",
+    icon: Mail,
+    href: "mailto:hello@selcukcukur.me",
+  },
+  {
+    name: "RSS",
+    icon: Rss ,
+    href: "mailto:hello@selcukcukur.me",
   }
 ] as const
