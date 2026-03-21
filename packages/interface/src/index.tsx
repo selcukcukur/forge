@@ -2,7 +2,8 @@
 export * from "./hooks"
 
 // Providers
-export * from "./providers/theme-provider"
+export { DirectionProvider } from "./providers/direction-provider"
+export { ThemeProvider } from "./providers/theme-provider"
 
 // Layout
 export { Collapsible, CollapsibleTrigger, CollapsibleContent } from "./components/layout/collapsible"
@@ -11,4 +12,4 @@ export { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./componen
 export { Scrollable, ScrollableBar } from "./components/layout/scrollable"
 
 // General
-export * from "./components/client-only"
+export { ClientOnly } from "./components/client-only"

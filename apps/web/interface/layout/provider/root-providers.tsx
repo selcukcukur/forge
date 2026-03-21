@@ -3,6 +3,7 @@
 import type { PropsWithChildren } from "react"
 
 import {
+  DirectionProvider,
   ThemeProvider
 } from "@workspace/interface"
 
@@ -28,14 +29,18 @@ import {
  * ```
  */
 export function RootProviders({
+  locale = "en",
+  direction = "ltr",
   children
 }: PropsWithChildren<{
   locale: string,
   direction?: "ltr" | "rtl"
 }>) {
   return (
-    <ThemeProvider>
-      {children}
-    </ThemeProvider>
+    <DirectionProvider direction={direction}>
+      <ThemeProvider>
+        {children}
+      </ThemeProvider>
+    </DirectionProvider>
   )
 }
