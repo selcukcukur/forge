@@ -3,11 +3,12 @@ import type { SocialAccount } from "@library/type/site"
 import {
   Facebook,
   Github,
+  Instagram,
   Twitter,
   YouTube,
-  Linkedin
+  Linkedin,
+  Rss
 } from "@workspace/interface/icons"
-import {Instagram, Mail, Rss} from "lucide-react";
 
 /**
  * Company social media accounts list
