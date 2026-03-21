@@ -7,7 +7,7 @@ import { cn } from "@workspace/utility"
 import Link from "next/link"
 
 import { socialAccounts } from "@config/site"
-import {Separator} from "@workspace/interface";
+import {NavigationMobile, Separator} from "@workspace/interface";
 
 const navItems = [
   { label: "Home", href: "/" },

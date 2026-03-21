@@ -1,17 +1,21 @@
-import React from "react";
-import Link from "next/link";
-import { cn } from "@workspace/utility";
+import React, { type JSX } from "react"
+import Link from "next/link"
+
+import { cn } from "@workspace/utility"
 
 type NavItem = {
-  label: string;
-  href: string;
-};
+  label: string
+  href: string
+}
 
 type SocialAccount = {
-  name: string;
-  href: string;
-  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-};
+  // Account target (e.g. "Facebook")
+  name?: string
+  // Icon component or icon name (e.g. "ph:facebook-logo-duotone")
+  icon?: JSX | string
+  // Social media account URL
+  href?: string
+}
 
 interface NavigationMobileProps {
   navItems: NavItem[];
