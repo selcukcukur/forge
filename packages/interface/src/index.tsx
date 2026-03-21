@@ -23,5 +23,8 @@ export {
   NavigationMenuTrigger
 } from "./components/navigation/navigation-primitive"
 
+// Separator
+export { Separator } from "./components/separator/separator"
+
 // General
 export { ClientOnly } from "./components/client-only"

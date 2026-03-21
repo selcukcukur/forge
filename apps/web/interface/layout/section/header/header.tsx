@@ -7,13 +7,14 @@ import { cn } from "@workspace/utility"
 import Link from "next/link"
 
 import { socialAccounts } from "@config/site"
+import {Separator} from "@workspace/interface";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Projects", href: "/projects" },
-  { label: "Notes", href: "/notes" },
-  { label: "Workbench", href: "/workbench" },
-  { label: "Blog", href: "/blog" },
+  { label: "Projects", href: "#" },
+  { label: "Notes", href: "#" },
+  { label: "Workbench", href: "#" },
+  { label: "Blog", href: "#" },
 ]
 
 export function Header() {
@@ -65,25 +66,13 @@ export function Header() {
                 className={cn(
                   "relative px-4 py-2.5 font-mono text-xs uppercase tracking-widest transition-all duration-300 rounded-lg",
                   isActive(item.href)
-                    ? "text-primary"
+                    ? "text-primary bg-secondary/50"
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary/50",
                   hoveredIndex === index && !isActive(item.href) && "text-foreground",
                 )}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <span
-                  className={cn(
-                    "absolute left-1.5 text-primary transition-all duration-200",
-                    isActive(item.href)
-                      ? "opacity-100 translate-x-0"
-                      : hoveredIndex === index
-                        ? "opacity-100 translate-x-0"
-                        : "opacity-0 -translate-x-2",
-                  )}
-                >
-                  {">"}
-                </span>
                 <span
                   className={cn(
                     "transition-transform duration-200",
@@ -107,32 +96,34 @@ export function Header() {
 
           <div className="flex items-center gap-4">
             <div className="hidden items-center gap-1 sm:flex">
-              {socialAccounts.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.name}
-                  className="group relative flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-all duration-300 hover:text-primary hover:bg-primary/10"
-                >
-                  {link.icon && <link.icon className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />}
-                  <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-card border border-border px-2.5 py-1 font-mono text-[10px] text-muted-foreground opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:-bottom-9 pointer-events-none shadow-lg">
-                    {link.name}
-                  </span>
-                </a>
-              ))}
+              <button
+                className="group relative flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-all duration-300 hover:text-primary hover:bg-primary/10 cursor-pointer"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4.5">
+                  <path d="M2 3v18"></path>
+                  <rect width="12" height="18" x="6" y="3" rx="2"></rect>
+                  <path d="M22 3v18"></path>
+                </svg>
+              </button>
+
+              <button
+                className="group relative flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-all duration-300 hover:text-primary hover:bg-primary/10 cursor-pointer"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4.5">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                  <path d="M12 3l0 18"></path>
+                  <path d="M12 9l4.65 -4.65"></path>
+                  <path d="M12 14.3l7.37 -7.37"></path>
+                  <path d="M12 19.6l8.85 -8.85"></path>
+                </svg>
+
+              </button>
             </div>
 
-            <div className="hidden h-5 w-px bg-border sm:block" />
-
-            <div className="hidden items-center gap-2.5 font-mono text-xs text-muted-foreground sm:flex px-3 py-1.5 rounded-full bg-secondary/50 border border-border/50">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-              </span>
-              <span>status: building</span>
-            </div>
+            <div className="hidden h-5 w-px bg-border sm:block"/>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -166,8 +157,8 @@ export function Header() {
         {/* Mobile Menu */}
         <div
           className={cn(
-            " transition-all duration-400 md:hidden bg-background",
-            isMobileMenuOpen ? "max-h-96 opacity-100 pt-4" : "max-h-0 opacity-0",
+            "transition-all duration-400 md:hidden bg-background",
+            isMobileMenuOpen ? "max-h-96 opacity-100 pt-4" : "max-h-0 opacity-0"
           )}
         >
           <div className="flex flex-col gap-1 border-t border-border/50 pt-4">
@@ -197,21 +188,9 @@ export function Header() {
                   {link.icon && <link.icon className="h-4 w-4" />}
                 </a>
               ))}
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-border/50">
 
-              </div>
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-border/50">
-
-              </div>
             </div>
 
-            <div className="mt-3 flex items-center gap-2.5 px-4 py-3 font-mono text-xs text-muted-foreground bg-secondary/30 rounded-lg mx-4 mb-2">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-              </span>
-              <span>status: building</span>
-            </div>
           </div>
         </div>
       </div>
