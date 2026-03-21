@@ -38,3 +38,19 @@
 @import "./general/responsive.css";
 @import "./general/typography.css";
 @import "./general/variable.css";
+
+/* Refined scanline effect - more subtle */
+.lines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    oklch(0 0 0 / 0.015) 3px,
+    oklch(0 0 0 / 0.015) 6px
+  );
+  pointer-events: none;
+  z-index: 100;
+}

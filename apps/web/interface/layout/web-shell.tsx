@@ -10,7 +10,7 @@ import { Header } from "@interface/layout/section/header/header"
  */
 export default function WebShell({ children }: { children: ReactNode }) {
   return (
-    <main className="relative min-h-screen overflow-hidden sc-lines">
+    <main className="relative min-h-screen overflow-hidden lines">
       <div className="relative z-10">
         <Header />
 
