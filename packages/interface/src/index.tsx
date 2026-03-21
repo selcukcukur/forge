@@ -12,6 +12,7 @@ export { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./componen
 export { Scrollable, ScrollableBar } from "./components/layout/scrollable"
 
 // Navigation
+export { NavigationMobile } from "./components/navigation/navigation-mobile"
 export {
   NavigationMenu,
   NavigationMenuChevron,
