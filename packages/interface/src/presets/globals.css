@@ -54,3 +54,15 @@
   pointer-events: none;
   z-index: 100;
 }
+
+body {
+  @apply bg-background text-foreground;
+  /* Ensure smooth scrolling on mobile */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Enable hardware acceleration for better mobile performance */
+  transform: translateZ(0);
+  will-change: auto;
+  /* Prevent unwanted zoom on input focus for iOS */
+  font-size: 16px;
+}
