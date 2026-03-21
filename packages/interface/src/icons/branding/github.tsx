@@ -6,6 +6,7 @@ export function Github(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       viewBox="0 0 24 24"
+      fill="currentColor"
       {...props}
     >
       <title>GitHub</title>
@@ -22,7 +23,7 @@ export function Github(props: SVGProps<SVGSVGElement>) {
         1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81
         1.096.81 2.22 0 1.606-.015 2.896-.015 3.286
         0 .315.21.69.825.57C20.565 22.092 24 17.592
-        24 12.297c0-6.627-5.373-12-12-12"/>
+        24 12.297c0-6.627-5.373-12-12-12" />
     </svg>
   )
 }
