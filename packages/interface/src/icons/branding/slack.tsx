@@ -1,11 +1,13 @@
 import type { SVGProps } from "react"
 
+import { cn } from "@workspace/utility"
+
 export function Slack({
   className,
   ...props
 }: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24px" height="24px" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)}{...props}>
       <g className="nc-icon-wrapper" fill="currentColor"><path d="M8.463,19.43c0,1.503-1.228,2.731-2.731,2.731s-2.731-1.228-2.731-2.731,1.228-2.731,2.731-2.731h2.731v2.731Z"></path>
         <path d="M9.839,19.43c0-1.503,1.228-2.731,2.731-2.731s2.731,1.228,2.731,2.731v6.839c0,1.503-1.228,2.731-2.731,2.731s-2.731-1.228-2.731-2.731c0,0,0-6.839,0-6.839Z"></path>
         <path d="M12.57,8.463c-1.503,0-2.731-1.228-2.731-2.731s1.228-2.731,2.731-2.731,2.731,1.228,2.731,2.731v2.731h-2.731Z"></path>

@@ -1,11 +1,13 @@
 import type { SVGProps } from "react"
 
+import { cn } from "@workspace/utility"
+
 export function Rss({
   className,
   ...props
 }: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24px" height="24px" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)}{...props}>
       <g fill="currentColor">
         <circle cx="6.566" cy="25.434" r="3.566"></circle>
         <path d="M20.234,29h-5.051c0-6.728-5.454-12.183-12.183-12.183h0v-5.051c9.518,0,17.234,7.716,17.234,17.234Z"></path>

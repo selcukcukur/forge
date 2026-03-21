@@ -1,11 +1,13 @@
 import type { SVGProps } from "react"
 
+import { cn } from "@workspace/utility"
+
 export function Soundcloud({
   className,
   ...props
 }: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24px" height="24px" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)}{...props}>
       <g fill="currentColor">
         <path d="M31.998,18.89c-.069,2.398-2.148,4.231-4.533,4.231h-10.906c-.5-.004-.903-.411-.901-.911V10.475c-.021-.416,.22-.802,.603-.966,0,0,1-.685,3.111-.685,1.296-.005,2.57,.344,3.683,1.007,1.754,1.026,2.997,2.742,3.426,4.728,.376-.109,.766-.163,1.158-.161,1.179,0,2.308,.478,3.129,1.324s1.265,1.989,1.229,3.167Z"></path>
         <path d="M14.295,11.222c.329,3.978,.569,7.606,0,11.577,0,.195-.158,.353-.353,.353s-.353-.158-.353-.353c-.528-3.933-.295-7.634,0-11.577,0-.195,.158-.353,.353-.353s.353,.158,.353,.353Z"></path>
