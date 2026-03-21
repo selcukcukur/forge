@@ -2,12 +2,28 @@ import type { SVGProps } from "react"
 
 import { cn } from "@workspace/utility"
 
+/**
+ * Render an icon component with customizable sizing and styling
+ *
+ * **Props**
+ * - `className` – Optional css class styles for sizing/styling
+ * - `props` – All other native svg props are forwarded
+ *
+ * **Usage**
+ * ```tsx
+ * // Basic
+ * <Google />
+ *
+ * // Advanced
+ * <Google className="size-6" />
+ * ```
+ */
 export function Google({
   className,
   ...props
 }: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)}{...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)} {...props}>
       <g fill="currentColor">
         <path d="M29.44,16.318c0-.993-.089-1.947-.255-2.864h-13.185v5.422h7.535c-.331,1.744-1.324,3.22-2.813,4.213v3.525h4.544c2.647-2.444,4.175-6.033,4.175-10.296Z" opacity=".4"></path>
         <path d="M16,30c3.78,0,6.949-1.247,9.265-3.385l-4.544-3.525c-1.247,.84-2.838,1.349-4.722,1.349-3.64,0-6.733-2.456-7.84-5.765l-2.717,2.09-1.941,1.525c2.304,4.569,7.025,7.713,12.498,7.713Z"></path>

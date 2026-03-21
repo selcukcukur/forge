@@ -2,12 +2,28 @@ import type { SVGProps } from "react"
 
 import { cn } from "@workspace/utility"
 
+/**
+ * Render an icon component with customizable sizing and styling
+ *
+ * **Props**
+ * - `className` – Optional css class styles for sizing/styling
+ * - `props` – All other native svg props are forwarded
+ *
+ * **Usage**
+ * ```tsx
+ * // Basic
+ * <Qq />
+ *
+ * // Advanced
+ * <Qq className="size-6" />
+ * ```
+ */
 export function Qq({
   className,
   ...props
 }: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)}{...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)} {...props}>
       <g fill="currentColor">
         <path d="M16.001,31.632c-2.787,0-5.346-.933-6.993-2.326-.837,.25-1.907,.652-2.582,1.151-.578,.427-.506,.861-.402,1.037,.457,.772,7.844,.493,9.977,.253v-.114Z" opacity=".4"></path>
         <path d="M16.001,31.632c2.788,0,5.346-.933,6.994-2.326,.836,.25,1.907,.652,2.582,1.151,.578,.427,.506,.861,.401,1.037-.457,.772-7.844,.493-9.977,.253v-.114Z" opacity=".4"></path>

@@ -2,6 +2,22 @@ import type { SVGProps } from 'react'
 
 import { cn } from "@workspace/utility"
 
+/**
+ * Render an icon component with customizable sizing and styling
+ *
+ * **Props**
+ * - `className` – Optional css class styles for sizing/styling
+ * - `props` – All other native svg props are forwarded
+ *
+ * **Usage**
+ * ```tsx
+ * // Basic
+ * <Behance />
+ *
+ * // Advanced
+ * <Behance className="size-6" />
+ * ```
+ */
 export function Behance({
   className,
   ...props

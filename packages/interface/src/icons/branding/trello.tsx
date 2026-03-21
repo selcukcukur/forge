@@ -2,12 +2,28 @@ import type { SVGProps } from "react"
 
 import { cn } from "@workspace/utility"
 
+/**
+ * Render an icon component with customizable sizing and styling
+ *
+ * **Props**
+ * - `className` – Optional css class styles for sizing/styling
+ * - `props` – All other native svg props are forwarded
+ *
+ * **Usage**
+ * ```tsx
+ * // Basic
+ * <Trello />
+ *
+ * // Advanced
+ * <Trello className="size-6" />
+ * ```
+ */
 export function Trello({
   className,
   ...props
 }: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)}{...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)} {...props}>
       <g fill="currentColor">
         <path d="M25.906,3H6.089c-1.707,.002-3.089,1.387-3.089,3.094V25.911c0,1.706,1.383,3.089,3.089,3.089H25.906c1.707,0,3.091-1.383,3.094-3.089V6.094c-.002-1.708-1.386-3.091-3.094-3.094ZM14.197,21.729c.002,.566-.454,1.026-1.02,1.028-.001,0-.003,0-.004,0h-4.348c-.566,0-1.024-.459-1.024-1.024,0-.001,0-.003,0-.004V8.829c-.002-.566,.454-1.026,1.02-1.028,.001,0,.003,0,.004,0h4.348c.566,0,1.024,.459,1.024,1.024,0,.001,0,.003,0,.004v12.9Zm10.002-5.923c0,.568-.46,1.028-1.028,1.028h-4.344c-.568,0-1.028-.46-1.028-1.028v-6.977c0-.568,.46-1.028,1.028-1.028h4.344c.568,0,1.028,.46,1.028,1.028v6.977Z" fillRule="evenodd"></path>
       </g>

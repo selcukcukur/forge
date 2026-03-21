@@ -2,12 +2,28 @@ import type { SVGProps } from "react"
 
 import { cn } from "@workspace/utility"
 
+/**
+ * Render an icon component with customizable sizing and styling
+ *
+ * **Props**
+ * - `className` – Optional css class styles for sizing/styling
+ * - `props` – All other native svg props are forwarded
+ *
+ * **Usage**
+ * ```tsx
+ * // Basic
+ * <Weibo />
+ *
+ * // Advanced
+ * <Weibo className="size-6" />
+ * ```
+ */
 export function Weibo({
   className,
   ...props
 }: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)}{...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={cn("w-auto", className)} {...props}>
       <g fill="currentColor">
         <path d="M13.443,27.064c-5.297,.522-9.87-1.872-10.215-5.35-.344-3.478,3.673-6.721,8.97-7.244,5.298-.524,9.871,1.871,10.215,5.347,.343,3.479-3.672,6.724-8.97,7.247m10.595-11.546c-.451-.135-.76-.227-.524-.818,.511-1.286,.564-2.395,.01-3.186-1.039-1.484-3.881-1.404-7.139-.04,0-.002-1.023,.448-.761-.364,.501-1.611,.426-2.96-.354-3.739-1.767-1.769-6.468,.067-10.499,4.096C1.753,14.486,0,17.685,0,20.452,0,25.744,6.786,28.961,13.425,28.961c8.703,0,14.492-5.057,14.492-9.071,0-2.425-2.043-3.802-3.879-4.372"></path>
         <path d="M29.818,5.835c-2.101-2.33-5.202-3.218-8.063-2.609h0c-.661,.141-1.084,.793-.942,1.454,.141,.661,.792,1.084,1.454,.942,2.036-.432,4.238,.201,5.733,1.855,1.493,1.655,1.898,3.913,1.259,5.891h0c-.209,.646,.144,1.336,.79,1.544,.643,.208,1.334-.144,1.542-.787v-.005c.897-2.785,.33-5.958-1.772-8.285"></path>
