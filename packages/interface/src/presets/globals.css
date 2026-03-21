@@ -39,3 +39,173 @@
 @import "./general/responsive.css";
 @import "./general/typography.css";
 @import "./general/variable.css";
+
+@layer base {
+  /* Global element optimizations */
+  * {
+    @apply border-border outline-ring/50;
+    /* Optimize for mobile touch and performance */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+    -webkit-touch-callout: none; /* Disable callout menu on iOS */
+  }
+
+  /* Body defaults */
+  body {
+    @apply bg-background text-foreground;
+    /* Ensure smooth scrolling on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Enable hardware acceleration for better mobile performance */
+    transform: translateZ(0);
+    will-change: auto;
+    /* Prevent unwanted zoom on input focus for iOS */
+    font-size: 16px;
+  }
+
+  /* HTML defaults */
+  html {
+    /* Smooth scroll behavior */
+    scroll-behavior: smooth;
+    /* Mobile-friendly viewport */
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Improve touch targets on mobile */
+  button, a, [role="button"] {
+    min-height: 44px; /* Minimum touch target height */
+    min-width: 44px;  /* Minimum touch target width */
+    @apply md:min-h-auto md:min-w-auto; /* Reset on larger screens */
+  }
+
+  /* Selection styling */
+  ::selection {
+    background: oklch(from var(--primary) l c h / 0.3);
+    color: var(--foreground);
+  }
+
+  /* Focus styles enhancement */
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Refined scanline effect - more subtle */
+  .lines::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Subtle repeating linear gradient for scanline effect */
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      oklch(0 0 0 / 0.015) 3px,
+      oklch(0 0 0 / 0.015) 6px
+    );
+    pointer-events: none; /* Prevent interaction */
+    z-index: 100; /* Overlay above content */
+  }
+}
+
+/* Enhanced cursor glow with smoother gradient */
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-color) 0%, transparent 65%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: blur(10px);
+}
+:root:not(.dark) .cursor-glow {
+  background: radial-gradient(circle, var(--glow-color-strong) 0%, transparent 65%);
+}
+
+/* Enhanced typing cursor with smoother gradient */
+.typing-cursor::after {
+  content: "▋";
+  animation: blink 1s step-end infinite;
+  color: var(--primary);
+}
+:root:not(.dark) .typing-cursor::after {
+  color: var(--primary);
+}
+
+/* Border glow effect */
+.border-glow {
+  position: relative;
+}
+.border-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--primary) 0%, transparent 40%, transparent 60%, var(--primary) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+.border-glow:hover::before {
+  opacity: 0.5;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: oklch(from var(--card) l c h / 0.6);
+  backdrop-filter: blur(12px) saturate(1.5);
+  -webkit-backdrop-filter: blur(12px) saturate(1.5);
+}
+.glass-strong {
+  background: oklch(from var(--card) l c h / 0.8);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+}
+
+/* Interactive hover card effect */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -8px oklch(0 0 0 / 0.12);
+}
+.dark .hover-lift:hover {
+  box-shadow: 0 12px 40px -8px oklch(0 0 0 / 0.4);
+}
+
+/* Text gradient effect */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), oklch(0.65 0.18 200));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Typography defaults for markdown content */
+.prose {
+  --tw-prose-body: var(--muted-foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-links: var(--primary);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-quotes: var(--muted-foreground);
+  --tw-prose-code: var(--primary);
+  --tw-prose-pre-bg: color-mix(in oklch, var(--card) 92%, black);
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+}
+.dark .prose {
+  --tw-prose-body: var(--muted-foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-links: var(--primary);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-quotes: var(--muted-foreground);
+  --tw-prose-code: var(--primary);
+  --tw-prose-pre-bg: color-mix(in oklch, var(--card) 92%, white);
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+}
