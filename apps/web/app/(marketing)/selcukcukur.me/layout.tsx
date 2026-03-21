@@ -6,6 +6,9 @@ import { createMetadata } from "@workspace/utility"
 // Document
 import Document from "@interface/document"
 
+// Provider
+import { RootProviders } from "@interface/layout/provider"
+
 // Layout
 import WebShell from "@interface/layout/web-shell"
 
@@ -27,9 +30,9 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function WebRootLayout({ children, params }: LayoutProps<'/'>) {
   return (
     <Document locale="en" suppress={true}>
-      <WebShell>
-        {children}
-      </WebShell>
+      <RootProviders locale="en">
+        <WebShell>{children}</WebShell>
+      </RootProviders>
     </Document>
   )
 }
