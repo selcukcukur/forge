@@ -62,6 +62,7 @@
 
   "exports"           : {
     "."               : "./src/index.tsx",
+    "./icons"         : "./src/icons/index.tsx",
     "./hooks"         : "./src/hooks/index.ts",
     "./fonts"         : "./src/presets/fonts/index.ts",
     "./globals.css"   : "./src/presets/globals.css"
