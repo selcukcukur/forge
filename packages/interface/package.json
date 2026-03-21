@@ -27,6 +27,7 @@
   "types"             : "./dist/index.d.ts",
 
   "dependencies"      : {
+    "@workspace/utility"        : "workspace:*",
     "@workspace/presets"        : "workspace:*",
     "class-variance-authority"  : "^0.7.1",
     "lucide-react"              : "^0.577.0",
