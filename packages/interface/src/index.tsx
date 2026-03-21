@@ -5,6 +5,20 @@ export * from "./hooks"
 export { DirectionProvider } from "./providers/direction-provider"
 export { ThemeProvider } from "./providers/theme-provider"
 
+// Drawer
+export {
+  Drawer,
+  DrawerOverlay,
+  DrawerPortal,
+  DrawerContent,
+  DrawerTrigger,
+  DrawerClose,
+  DrawerTitle,
+  DrawerHeader,
+  DrawerDescription,
+  DrawerFooter
+} from "./components/drawer/drawer"
+
 // Layout
 export { Collapsible, CollapsibleTrigger, CollapsibleContent } from "./components/layout/collapsible"
 export { Progressable, type ScrollProgressProps } from "./components/layout/progressable"
