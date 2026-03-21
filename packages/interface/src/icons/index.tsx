@@ -1,5 +1,6 @@
 export { Facebook } from "./branding/facebook"
 export { Github } from "./branding/github"
 export { Linkedin } from "./branding/linkedin"
+export { Rss } from "./branding/rss"
 export { Twitter } from "./branding/twitter"
 export { YouTube } from "./branding/youtube"
