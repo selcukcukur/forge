@@ -27,9 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
  * - `children` - The root component of the web application
  * - `params` - Locale segment from the URL
  */
-export default async function WebRootLayout({ children, params }: LayoutProps<'/'>) {
+export default async function WebRootLayout({ children, params }: LayoutProps<'/selcukcukur.me'>) {
   return (
-    <Document locale="en" suppress={true}>
+    <Document locale="en" suppress={true} bodyClassName="font-sans antialiased">
       <RootProviders locale="en">
         <WebShell>{children}</WebShell>
       </RootProviders>
