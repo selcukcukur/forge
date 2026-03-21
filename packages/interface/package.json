@@ -30,6 +30,8 @@
     "@workspace/presets"        : "workspace:*",
     "class-variance-authority"  : "^0.7.1",
     "lucide-react"              : "^0.577.0",
+    "framer-motion"             : "^12.38.0",
+    "motion"                    : "^12.38.0",
     "next"                      : "catalog:base",
     "next-themes"               : "^0.4.6",
     "react"                     : "catalog:base",
