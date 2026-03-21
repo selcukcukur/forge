@@ -1,6 +1,6 @@
 import type { SVGProps } from "react"
 
-export default function Github({
+export function Github({
   className,
   ...props
 }: SVGProps<SVGSVGElement>) {
