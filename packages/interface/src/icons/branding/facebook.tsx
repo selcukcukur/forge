@@ -1,6 +1,6 @@
 import type { SVGProps } from "react"
 
-export default function Facebook({
+export function Facebook({
   className,
   ...props
 }: SVGProps<SVGSVGElement>) {
