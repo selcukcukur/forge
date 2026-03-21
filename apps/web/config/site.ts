@@ -65,11 +65,6 @@ export const socialAccounts: SocialAccount[] = [
     href: "https://github.com/selcukcukur",
   },
   {
-    name: "E-Mail",
-    icon: Mail,
-    href: "mailto:hello@selcukcukur.me",
-  },
-  {
     name: "RSS",
     icon: Rss ,
     href: "mailto:hello@selcukcukur.me",
