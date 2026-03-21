@@ -26,19 +26,19 @@
 /* ------------------------------------------------------------------------------
 * Core (Variants)
 * ---------------------------------------------------------------------------- */
+@import "./utility/variant.css";
 @import "./utility/animate.css";
 @import "./utility/optimize.css";
 @import "./utility/radius.css";
 @import "./utility/scroll.css";
-@import "./utility/variant.css";
 
 /* ------------------------------------------------------------------------------
 * Tailwind (Presets)
 * ---------------------------------------------------------------------------- */
+@import "./general/variable.css";
 @import "./general/palette.css";
 @import "./general/responsive.css";
 @import "./general/typography.css";
-@import "./general/variable.css";
 
 @layer base {
   /* Global element optimizations */
