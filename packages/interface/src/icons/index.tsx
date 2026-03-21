@@ -1,3 +1,4 @@
+export { Discord } from "./branding/discord"
 export { Facebook } from "./branding/facebook"
 export { Github } from "./branding/github"
 export { Google } from "./branding/google"
