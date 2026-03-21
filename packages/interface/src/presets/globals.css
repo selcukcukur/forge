@@ -26,6 +26,7 @@
 /* ------------------------------------------------------------------------------
 * Core (Variants)
 * ---------------------------------------------------------------------------- */
+@import "./utility/animate.css";
 @import "./utility/radius.css";
 @import "./utility/scroll.css";
 @import "./utility/variant.css";

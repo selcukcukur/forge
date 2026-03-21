@@ -1,0 +1,207 @@
+@theme {
+  /* Animation (Flip) */
+  --animate-flip-x: flip-x 0.5s ease-in-out;
+  --animate-flip-y: flip-y 0.5s ease-in-out;
+
+  /* Animations */
+  --animate-scale-in: scale-in 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-scale-in-fade: scale-in-fade 0.2s ease-out forwards;
+  --animate-fade-in: fade-in 0.2s ease-out forwards;
+
+  --animate-slide-up-fade: slide-up-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-right-fade: slide-right-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-down-fade: slide-down-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-left-fade: slide-left-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-slide-in-from-right: slide-in-from-right 0.2s ease;
+  --animate-slide-out-to-right: slide-out-to-right 0.2s ease;
+
+  --animate-enter-from-right: enter-from-right 0.15s ease;
+  --animate-enter-from-left: enter-from-left 0.15s ease;
+  --animate-exit-to-right: exit-to-right 0.15s ease;
+  --animate-exit-to-left: exit-to-left 0.15s ease;
+
+  --animate-scale-in-content: scale-in-content 0.2s ease;
+  --animate-scale-out-content: scale-out-content 0.2s ease;
+
+  --animate-accordion-down: accordion-down 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  --animate-accordion-up: accordion-up 300ms cubic-bezier(0.87, 0, 0.13, 1);
+
+  /* Animations */
+  --animate-infinite-scroll: infinite-scroll 22s linear infinite;
+  --animate-infinite-scroll-y: infinite-scroll-y 22s linear infinite;
+
+  --animate-text-appear: text-appear 0.15s ease;
+  --animate-table-pinned-shadow: table-pinned-shadow cubic-bezier(0, 0, 1, 0);
+  --animate-caret-blink: caret-blink 1s ease-out infinite;
+  --animate-pulse-scale: pulse-scale 6s ease-out infinite;
+
+  --animate-gradient-move: gradient-move 5s linear infinite;
+  --animate-ellipsis-wave: ellipsis-wave 1.5s ease-in-out infinite;
+
+  /* General */
+  --animate-bounce: bounce 0.6s cubic-bezier(0.28, 0.84, 0.42, 1.15);
+  --animate-wiggle: wiggle 0.75s infinite;
+  --animate-spinner: spinner 1.2s linear infinite;
+  --animate-blink: blink 1.4s infinite both;
+  --animate-pulse: pulse 1s linear infinite alternate;
+  --animate-shake: shake 0.4s cubic-bezier(.36,.07,.19,.97);
+  --animate-typing: typing 1s steps(3) infinite;
+}
+
+@keyframes scale-in {
+  0% { transform: scale(var(--from-scale,0.95)); }
+  100% { transform: scale(var(--to-scale,1)); }
+}
+@keyframes scale-in-fade {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes scale-in-content {
+  0% { transform: rotateX(-30deg) scale(0.9); opacity: 0; }
+  100% { transform: rotateX(0deg) scale(1); opacity: 1; }
+}
+@keyframes scale-out-content {
+  0% { transform: rotateX(0deg) scale(1); opacity: 1; }
+  100% { transform: rotateX(-10deg) scale(0.95); opacity: 0; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-up-fade {
+  0% { opacity: 0; transform: translateY(var(--offset,2px)); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-right-fade {
+  0% { opacity: 0; transform: translateX(var(--offset,-2px)); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-down-fade {
+  0% { opacity: 0; transform: translateY(var(--offset,-2px)); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-left-fade {
+  0% { opacity: 0; transform: translateX(var(--offset,2px)); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-from-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+@keyframes slide-out-to-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes enter-from-right {
+  0% { transform: translateX(200px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes enter-from-left {
+  0% { transform: translateX(-200px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes exit-to-right {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(200px); opacity: 0; }
+}
+@keyframes exit-to-left {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-200px); opacity: 0; }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+/* Keyframes */
+@keyframes infinite-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(var(--scroll, -150%)); }
+}
+@keyframes infinite-scroll-y {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(var(--scroll, -150%)); }
+}
+@keyframes text-appear {
+  0% { opacity: 0; transform: rotateX(45deg) scale(0.95); }
+  100% { opacity: 1; transform: rotateX(0deg) scale(1); }
+}
+@keyframes table-pinned-shadow {
+  0% { filter: drop-shadow(rgba(0, 0, 0, 0.1) -2px 10px 6px); }
+  100% { filter: drop-shadow(rgba(0, 0, 0, 0) -2px 10px 6px); }
+}
+@keyframes caret-blink {
+  0%,70%,100% { opacity: 0; }
+  20%,50% { opacity: 1; }
+}
+@keyframes pulse-scale {
+  0% { transform: scale(0.8); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes ellipsis-wave {
+  0%,40% { transform: translateY(0); }
+  20% { transform: translateY(var(--offset, -10%)); }
+}
+
+/* General */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-12px); }
+  60% { transform: translateY(-6px); }
+}
+@keyframes wiggle {
+  0%,100% { transform: translateX(0%); transform-origin: 50% 50%; }
+  15% { transform: translateX(-4px) rotate(-4deg); }
+  30% { transform: translateX(6px) rotate(4deg); }
+  45% { transform: translateX(-6px) rotate(-2.4deg); }
+  60% { transform: translateX(2px) rotate(1.6deg); }
+  75% { transform: translateX(-1px) rotate(-0.8deg); }
+}
+@keyframes spinner {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+@keyframes pulse {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+@keyframes typing {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 0.6; }
+  100% { transform: scale(4); opacity: 0; }
+}
