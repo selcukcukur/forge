@@ -65,7 +65,7 @@ export function FooterHeart() {
             <button onClick={handleToggle} className="focus:outline-none transition-transform duration-200 cursor-pointer" aria-label="Like">
               {/* Icon */}
               <Heart
-                className={`size-4 ${likeStatus ? "text-primary" : "text-muted-foreground"} transition-colors duration-300`}
+                className={`size-4 ${likeStatus ? "text-primary fill-primary" : "text-muted-foreground"} transition-colors duration-300`}
               />
             </button>
           </DrawerTrigger>
