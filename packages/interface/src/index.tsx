@@ -5,6 +5,9 @@ export * from "./hooks"
 export { DirectionProvider } from "./providers/direction-provider"
 export { ThemeProvider } from "./providers/theme-provider"
 
+// Button
+export { Button } from "./components/button/button"
+
 // Drawer
 export {
   Drawer,
@@ -20,6 +23,25 @@ export {
 } from "./components/drawer/drawer"
 
 // Form
+export { Input } from "./components/form/input/input"
+export {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput,
+  InputGroupTextarea,
+  InputGroupText,
+  inputGroupAddonVariants,
+  inputGroupButtonVariants
+} from "./components/form/input/input-group"
+export {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSeparator,
+  InputOTPSlot
+} from "./components/form/input/input-otp"
+export { Textarea } from "./components/form/textarea/textarea"
+
 export {
   Field,
   FieldLabel,
@@ -32,7 +54,7 @@ export {
   FieldGroup,
   FieldSeparator
 } from "./components/form/field"
-export { Label} from "./components/form/label"
+export { Label } from "./components/form/label"
 
 // Layout
 export { Collapsible, CollapsibleTrigger, CollapsibleContent } from "./components/layout/collapsible"
