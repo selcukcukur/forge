@@ -1,6 +1,7 @@
 "use client"
 
 import type { PropsWithChildren } from "react"
+import { Analytics } from "@vercel/analytics/next"
 
 import {
   DirectionProvider,
@@ -40,6 +41,8 @@ export function RootProviders({
     <DirectionProvider direction={direction}>
       <ThemeProvider>
         {children}
+
+        <Analytics />
       </ThemeProvider>
     </DirectionProvider>
   )
