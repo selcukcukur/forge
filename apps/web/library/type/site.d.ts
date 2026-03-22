@@ -10,4 +10,6 @@ export type SocialAccount = {
   icon?: JSX | string
   // Social media account URL
   href?: string
+  // Social media account nickname
+  slug?: string
 }

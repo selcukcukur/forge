@@ -38,35 +38,47 @@ export const socialAccounts: SocialAccount[] = [
     name: "Facebook",
     icon: Facebook,
     href: "https://facebook.com/selcukcukur",
+    slug: "@selcukcukur"
   },
   {
     name: "X (Twitter)",
     icon: Twitter,
     href: "https://x.com/selcukcukur",
+    slug: "@selcukcukur"
   },
   {
     name: "Instagram",
     icon: Instagram,
     href: "https://instagram.com/selcukcukur",
+    slug: "@selcukcukur"
   },
   {
     name: "YouTube",
     icon: YouTube,
     href: "https://youtube.com/@selcukcukur",
+    slug: "@selcukcukur"
   },
   {
     name: "Linkedin",
     icon: Linkedin,
     href: "https://www.linkedin.com/in/selcukcukur",
+    slug: "@selcukcukur"
   },
   {
     name: "Github",
     icon: Github,
     href: "https://github.com/selcukcukur",
+    slug: "@selcukcukur"
+  },
+  {
+    name: "E-Mail",
+    icon: Github,
+    href: "mailto:hello@selcukcukur.me",
+    slug: "hello@selcukcukur.me"
   },
   {
     name: "RSS",
     icon: Rss ,
-    href: "mailto:hello@selcukcukur.me",
+    href: "mailto:hello@selcukcukur.me"
   }
 ] as const
