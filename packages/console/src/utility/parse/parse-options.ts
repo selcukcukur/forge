@@ -1,14 +1,14 @@
 import type {
   Option,
-  ParsedOptions
-} from "../../type/console"
+  Options
+} from "../../type"
 
 export function parseOptions<T extends Option[]>(
   defs: T,
   tokens: string[]
-): ParsedOptions<T> {
+): Options<T> {
   // Initialize an empty object to store parsed options
-  const opts: ParsedOptions<T> = {}
+  const opts: Options<T> = {}
 
   // Iterate over each token from the input
   tokens.forEach((token, i, arr) => {
@@ -24,7 +24,7 @@ export function parseOptions<T extends Option[]>(
       // - If inline value exists (--name=value), use it
       // - Else use the next token (--name value)
       // - If neither exists, default to boolean true (--flag)
-      opts[def.name as keyof ParsedOptions<T>] = val ?? arr[i + 1] ?? true
+      opts[def.name as keyof Options<T>] = val ?? arr[i + 1] ?? true
     } else if (token.startsWith("-")) {
       // Case 2: Short alias format, e.g. -n
       const alias = token.replace(/^-/, "")
@@ -36,15 +36,15 @@ export function parseOptions<T extends Option[]>(
       // Assign the value:
       // - Use the next token (-n value)
       // - If no next token, default to boolean true (-f)
-      opts[def.name as keyof ParsedOptions<T>] = arr[i + 1] ?? true
+      opts[def.name as keyof Options<T>] = arr[i + 1] ?? true
     }
   })
 
   // After processing tokens, fill in default values
   defs.forEach(def => {
     // If option was not provided and has a defaultValue, assign it
-    if (!(def.name in opts) && def.defaultValue) {
-      opts[def.name as keyof ParsedOptions<T>] = def.defaultValue
+    if (!(def.name in opts) && def.default) {
+      opts[def.name as keyof Options<T>] = def.default
     }
   })
 

@@ -1,8 +1,7 @@
 {
-  "private"           : true,
-  "name"              : "@workspace/console",
-  "description"       : "",
-  "keywords"          : [],
+  "name"              : "@selcukcukur/forge",
+  "description"       : "A laboratory terminal for your career, your fun, and your tools.",
+  "keywords"          : ["digital","laboratory","console","terminal","tools","games","resume","career","cv"],
   "license"           : "MIT",
   "homepage"          : "https://selcukcukur.me",
   "version"           : "0.0.1",

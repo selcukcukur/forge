@@ -1,14 +1,14 @@
 import type {
   Argument,
-  ParsedArguments
-} from "../../type/console"
+  Arguments
+} from "../../type"
 
 export function parseArguments<T extends Argument[]>(
   defs: T,
   tokens: string[]
-): ParsedArguments<T> {
+): Arguments<T> {
   // Create a temporary object to store parsed arguments
-  const args: Partial<ParsedArguments<T>> = {}
+  const args: Partial<Arguments<T>> = {}
 
   // Iterate over each argument definition
   defs.forEach((argDef, i) => {
@@ -22,10 +22,10 @@ export function parseArguments<T extends Argument[]>(
 
     // If a value exists, assign it to the argument name
     if (val) {
-      args[argDef.name as keyof ParsedArguments<T>] = val
+      args[argDef.name as keyof Arguments<T>] = val
     }
   })
 
   // Return the parsed arguments object, cast to the correct type
-  return args as ParsedArguments<T>
+  return args as Arguments<T>
 }
