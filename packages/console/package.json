@@ -1,0 +1,58 @@
+{
+  "private"           : true,
+  "name"              : "@workspace/console",
+  "description"       : "",
+  "keywords"          : [],
+  "license"           : "MIT",
+  "homepage"          : "https://selcukcukur.me",
+  "version"           : "0.0.1",
+
+  "author"            : {
+    "name"      : "Selçuk Çukur",
+    "email"     : "hello@selcukcukur.me",
+    "url"       : "https://selcukcukur.me"
+  },
+
+  "bugs"              : {
+    "email"   : "security@selcukcukur.me",
+    "url"     : "https://github.com/selcukcukur/forge/issues"
+  },
+
+  "scripts"           : {
+    "clean" : "rimraf node_modules dist .turbo"
+  },
+
+  "main"              : "./dist/index.mjs",
+  "module"            : "./dist/index.mjs",
+  "types"             : "./dist/index.d.ts",
+
+  "dependencies"      : {
+    "@workspace/utility"        : "workspace:*",
+    "@workspace/presets"        : "workspace:*",
+    "next"                      : "catalog:base",
+    "react"                     : "catalog:base",
+    "react-dom"                 : "catalog:base"
+  },
+  "devDependencies"   : {
+    "@types/node"               : "catalog:type",
+    "@types/react"              : "catalog:type",
+    "typescript"                : "catalog:base"
+  },
+
+  "exports"           : {
+    "."   : "./src/index.ts"
+  },
+
+  "publishConfig"     : {
+    "access"  : "public"
+  },
+  "publisher"         : {
+    "type" : "github",
+    "user" : "selcukcukur",
+    "repo" : "forge"
+  },
+  "repository"        : {
+    "type"  : "git",
+    "url"   : "git+https://github.com/selcukcukur/forge.git"
+  }
+}
