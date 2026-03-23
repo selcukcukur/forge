@@ -1,3 +1,10 @@
+export interface Application {
+  name: string
+  version: string
+  description?: string
+}
+
+
 export interface Argument {
   name: string
   description: string

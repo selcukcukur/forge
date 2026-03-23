@@ -1,4 +1,4 @@
-import type { Command } from "./type/console"
+import type { Application, Command } from "./type/console"
 
 import {
   parseArguments,
@@ -6,7 +6,33 @@ import {
 } from "./utility"
 
 export class Console {
+  /**
+   * Console application metadata
+   *
+   * @private
+   */
+  private app: Application
+
+  /**
+   * Registered console commands
+   *
+   * @private
+   */
   private commands: Command[] = []
+
+  /**
+   * Create a new console application instance
+   *
+   * **Parameters**
+   * - `app` - Application metadata (name, version, description)
+   * - `commands` - Optional initial set of commands
+   *
+   * @constructor
+   */
+  constructor(app: Application, commands?: Command[]) {
+    this.app = app
+    this.commands = commands || []
+  }
 
   register(command: Command) {
     this.commands.push(command)
@@ -32,5 +58,17 @@ export class Console {
     } catch (err: any) {
       return { type: "error", message: err.message }
     }
+  }
+
+
+
+  name() {
+    return this.app.name
+  }
+  version() {
+    return this.app.version
+  }
+  description() {
+    return this.app.description
   }
 }
