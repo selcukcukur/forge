@@ -91,6 +91,34 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  packages/console:
+    dependencies:
+      '@workspace/presets':
+        specifier: workspace:*
+        version: link:../presets
+      '@workspace/utility':
+        specifier: workspace:*
+        version: link:../utility
+      next:
+        specifier: ^16.2.0
+        version: 16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react:
+        specifier: ^19.2.4
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.2.4
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@types/node':
+        specifier: ^25.5.0
+        version: 25.5.0
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
   packages/interface:
     dependencies:
       '@workspace/presets':
