@@ -18,6 +18,14 @@ export interface Option {
   defaultValue?: string
 }
 
+export interface Command<A extends Argument[] = Argument[], O extends Option[] = Option[]> {
+  name: string
+  description: string
+  arguments?: A
+  options?: O
+  action: (input: ParsedInput<A, O>) => any
+}
+
 export type ParsedArguments<T extends Argument[]> = {
   [K in T[number]["name"]]: string
 }
@@ -26,10 +34,7 @@ export type ParsedOptions<T extends Option[]> = {
   [K in T[number]["name"]]?: string | boolean
 }
 
-export interface Command {
-  name: string
-  description: string
-  arguments?: Argument[]
-  options?: Option[]
-  action: (args?: Record<string, string>, opts?: Record<string, string>) => any
+export interface ParsedInput<A extends Argument[] = Argument[], O extends Option[] = Option[]> {
+  args: ParsedArguments<A>
+  opts: ParsedOptions<O>
 }
