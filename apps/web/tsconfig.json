@@ -1,5 +1,5 @@
 {
-  "extends"         : "@workspace/presets/next-config",
+  "extends"         : "@obvia/presets/next-config",
   "compilerOptions" : {
     "baseUrl" : ".",
     "paths"   : {

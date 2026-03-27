@@ -27,7 +27,6 @@
 
   "dependencies"      : {
     "@workspace/utility"        : "workspace:*",
-    "@workspace/presets"        : "workspace:*",
     "next"                      : "catalog:base",
     "react"                     : "catalog:base",
     "react-dom"                 : "catalog:base"
@@ -35,6 +34,7 @@
   "devDependencies"   : {
     "@types/node"               : "catalog:type",
     "@types/react"              : "catalog:type",
+    "@obvia/presets"            : "^0.0.2",
     "typescript"                : "catalog:base"
   },
 

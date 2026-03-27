@@ -27,7 +27,6 @@
   "types"             : "./dist/index.d.ts",
 
   "dependencies"      : {
-    "@workspace/presets"        : "workspace:*",
     "class-variance-authority"  : "^0.7.1",
     "clsx"                      : "^2.1.1",
     "kleur"                     : "^4.1.5",
@@ -37,6 +36,7 @@
     "tailwind-merge"            : "^3.5.0"
   },
   "devDependencies"   : {
+    "@obvia/presets"            : "^0.0.2",
     "@types/node"               : "catalog:type",
     "@types/react"              : "catalog:type",
     "typescript"                : "catalog:base"

@@ -35,11 +35,12 @@
     "next"                    : "catalog:base",
     "react"                   : "catalog:base",
     "react-dom"               : "catalog:base",
+    "swr"                     : "^2.4.1",
     "lucide-react"            : "^0.577.0",
     "jotai"                   : "^2.18.1"
   },
   "devDependencies"   : {
-    "@workspace/presets"      : "workspace:*",
+    "@obvia/presets"          : "^0.0.2",
     "@types/node"             : "catalog:type",
     "@types/react"            : "catalog:type",
     "@types/react-dom"        : "catalog:type",

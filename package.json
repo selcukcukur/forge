@@ -30,7 +30,7 @@
   },
 
   "devDependencies"   : {
-    "@workspace/presets"                : "workspace:*",
+    "@obvia/presets"                    : "^0.0.2",
     "eslint"                            : "^10.1.0",
     "prettier"                          : "^3.8.1",
     "prettier-plugin-organize-imports"  : "^4.3.0",

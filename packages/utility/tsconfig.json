@@ -1,5 +1,5 @@
 {
-  "extends"         : "@workspace/presets/react-config",
+  "extends"         : "@obvia/presets/react-config",
   "compilerOptions" : {
     "baseUrl" : ".",
     "paths"   : {
