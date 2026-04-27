@@ -215,7 +215,7 @@ export interface Command {
   /** Get the command options **/
   options: () => Option[] | undefined
   /** Execute the command action **/
-  action: (input: ParsedInput) => any
+  action: (input: Input) => any
 }
 
 export interface CommandOptions<A extends Argument[] = [], O extends Option[] = []> {

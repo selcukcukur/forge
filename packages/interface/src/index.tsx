@@ -81,3 +81,7 @@ export { Separator } from "./components/separator/separator"
 
 // General
 export { ClientOnly } from "./components/client-only"
+export { ThemeToggle } from "./components/theme-toggle"
+
+// General
+export { ShimmeringText, type ShimmeringTextProps } from "./components/text/shimmering-text"
