@@ -98,9 +98,9 @@ scoop install mkcert
 
 ## Generate
 
-To create certificates for Obvia domains, run
+To generate trusted SSL certificates for your local domains, run :
 ```bash
-mkcert "*.obvia.dev" "obvia.dev"
+mkcert "*.selcukcukur.dev" "selcukcukur.dev"
 ```
 
 This command works the same way on **Linux**, **macOS**, and **Windows**
