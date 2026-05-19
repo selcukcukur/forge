@@ -1,6 +1,11 @@
 import { PageHeader } from "@interface/layout/section/header/page-header"
+import { ArticleList } from "@interface/article/article-list";
+import {posts} from "@library/content";
 
 export default function BlogPage() {
+  const test = posts.getPages()
+
+
   return (
     <>
       <PageHeader
@@ -13,7 +18,7 @@ export default function BlogPage() {
       <section className="px-4 sm:px-6 py-16 sm:py-20 border-t border-border/30">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[1fr_320px]">
-            test
+            <ArticleList posts={test} />
           </div>
         </div>
       </section>

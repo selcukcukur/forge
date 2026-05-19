@@ -39,7 +39,8 @@
     "fumadocs-mdx"            : "^15.0.7",
     "swr"                     : "^2.4.1",
     "lucide-react"            : "^0.577.0",
-    "jotai"                   : "^2.18.1"
+    "jotai"                   : "^2.18.1",
+    "zod"                     : "^4"
   },
   "devDependencies"   : {
     "@obvia/presets"          : "^0.0.2",

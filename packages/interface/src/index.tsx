@@ -5,6 +5,16 @@ export * from "./hooks"
 export { DirectionProvider } from "./providers/direction-provider"
 export { ThemeProvider } from "./providers/theme-provider"
 
+// Avatar
+export {
+  Avatar,
+  AvatarImage,
+  AvatarBadge,
+  AvatarFallback,
+  AvatarGroup,
+  AvatarGroupCount
+} from "./components/avatar/avatar"
+
 // Button
 export { Button } from "./components/button/button"
 

@@ -1,4 +1,5 @@
 import { loader } from "fumadocs-core/source"
+import { toFumadocsSource } from "fumadocs-mdx/runtime/server"
 import {
   docsCollection,
   notesCollection,
@@ -20,7 +21,7 @@ export const notes = loader({
   baseUrl : "/notes",
 
   // Convert notes collection into fumadocs source format
-  source  : notesCollection.toFumadocsSource()
+  source  : toFumadocsSource(notesCollection, [])
 })
 
 // Load blog posts collection
@@ -29,5 +30,10 @@ export const posts = loader({
   baseUrl : "/blog",
 
   // Convert posts collection into fumadocs source format
-  source  : postsCollection.toFumadocsSource()
+  source  : toFumadocsSource(postsCollection, [])
 })
+
+export type DocsEntry = typeof docs['$inferPage']
+export type DocsMeta = typeof docs['$inferMeta']
+export type NoteEntry = typeof notes['$inferPage']
+export type PostEntry = typeof posts['$inferPage']
