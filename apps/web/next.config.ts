@@ -1,5 +1,7 @@
 import type { NextConfig } from "next"
 
+import { createMDX } from "fumadocs-mdx/next"
+
 /**
  * The next.js configuration object
  */
@@ -122,7 +124,13 @@ const nextConfig: NextConfig = {
 }
 
 /**
- * This file must be placed at the root of the project and will
- * be automatically loaded by Next.js during build/runtime
+ * Fumadocs configuration wrapper
  */
-export default nextConfig
+const withMDX = createMDX({
+  // Configure MDX integration options
+})
+
+/**
+ * Automatically loaded during build and runtime
+ */
+export default withMDX(nextConfig)

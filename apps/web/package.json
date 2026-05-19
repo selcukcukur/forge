@@ -35,6 +35,8 @@
     "next"                    : "catalog:base",
     "react"                   : "catalog:base",
     "react-dom"               : "catalog:base",
+    "fumadocs-core"           : "^16.8.12",
+    "fumadocs-mdx"            : "^15.0.7",
     "swr"                     : "^2.4.1",
     "lucide-react"            : "^0.577.0",
     "jotai"                   : "^2.18.1"
@@ -44,6 +46,7 @@
     "@types/node"             : "catalog:type",
     "@types/react"            : "catalog:type",
     "@types/react-dom"        : "catalog:type",
+    "@types/mdx"              : "^2.0.13",
     "typescript"              : "catalog:base"
   },
 

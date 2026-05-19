@@ -58,6 +58,7 @@ jest.config.js
 *.lockb
 
 # Ignore : Vendors & Generated
+.source/
 contentlayer/
 .contentlayer/
 .content-collections/
