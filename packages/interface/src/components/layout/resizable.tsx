@@ -2,7 +2,7 @@
 
 import * as Primitive from "react-resizable-panels"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 export function ResizablePanelGroup({
   className,

@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Sun, Moon, Monitor } from "lucide-react";
-import { cn } from "@workspace/utility";
+import { cn } from "@obvia/utilities";
 
 export function ThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme();

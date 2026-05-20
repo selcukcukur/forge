@@ -2,7 +2,7 @@
 
 import { useMemo, type ComponentProps, type ReactNode } from "react"
 
-import { cn, cv, type VariantOf } from "@workspace/utility"
+import { cn, cv, type VariantOf } from "@obvia/utilities"
 import { Separator, Label } from "@workspace/interface"
 
 function FieldSet({

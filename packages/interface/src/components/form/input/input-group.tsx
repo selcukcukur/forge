@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from "react"
 
-import { cn, cv, type VariantOf } from "@workspace/utility"
+import { cn, cv, type VariantOf } from "@obvia/utilities"
 import {
   Button,
   Input,

@@ -3,7 +3,7 @@
 import type { ComponentProps } from "react"
 import { Label as LabelPrimitive } from "radix-ui"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 /**
  * Provides a styled label element with consistent typography and disabled state handling

@@ -1,7 +1,7 @@
 import { ComponentProps } from "react"
 import { NavigationMenu as Primitive } from "radix-ui"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 /**
  * Provides the root container for a Radix navigation menu, handling layout and optional viewport rendering

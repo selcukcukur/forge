@@ -1,7 +1,7 @@
 import React, { type JSX } from "react"
 import Link from "next/link"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 type NavItem = {
   label: string

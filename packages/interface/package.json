@@ -27,7 +27,7 @@
   "types"             : "./dist/index.d.ts",
 
   "dependencies"      : {
-    "@workspace/utility"        : "workspace:*",
+    "@obvia/utilities"          : "^1.0.3",
     "class-variance-authority"  : "^0.7.1",
     "lucide-react"              : "^0.577.0",
     "framer-motion"             : "^12.38.0",

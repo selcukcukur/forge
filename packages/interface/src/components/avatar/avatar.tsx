@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Avatar as AvatarPrimitive } from "radix-ui"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 function Avatar({
                   className,

@@ -1,6 +1,6 @@
 import type { SVGProps } from "react"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 /**
  * Render an icon component with customizable sizing and styling

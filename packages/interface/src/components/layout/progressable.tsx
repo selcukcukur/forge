@@ -3,7 +3,7 @@
 import type { ComponentProps, RefObject } from "react"
 
 import { motion, useScroll } from "motion/react"
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 export interface ScrollProgressProps extends ComponentProps<typeof motion.div> {
   /**

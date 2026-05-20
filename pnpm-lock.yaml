@@ -19,43 +19,16 @@ overrides:
 importers:
 
   .:
-    devDependencies:
-      '@obvia/presets':
-        specifier: ^0.0.2
-        version: 0.0.2
-      eslint:
-        specifier: ^10.1.0
-        version: 10.1.0(jiti@2.6.1)
-      prettier:
-        specifier: ^3.8.1
-        version: 3.8.1
-      prettier-plugin-organize-imports:
-        specifier: ^4.3.0
-        version: 4.3.0(prettier@3.8.1)(typescript@5.9.3)
-      prettier-plugin-tailwindcss:
-        specifier: ^0.7.2
-        version: 0.7.2(prettier-plugin-organize-imports@4.3.0(prettier@3.8.1)(typescript@5.9.3))(prettier@3.8.1)
-      rimraf:
-        specifier: ^6.1.3
-        version: 6.1.3
-      turbo:
-        specifier: ^2.8.20
-        version: 2.8.20
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-
-  apps/web:
     dependencies:
+      '@obvia/utilities':
+        specifier: ^1.0.3
+        version: 1.0.3(next@16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@vercel/analytics':
         specifier: ^2.0.1
         version: 2.0.1(next@16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
       '@workspace/interface':
         specifier: workspace:*
-        version: link:../../packages/interface
-      '@workspace/utility':
-        specifier: workspace:*
-        version: link:../../packages/utility
+        version: link:packages/interface
       fumadocs-core:
         specifier: ^16.8.12
         version: 16.8.12(@mdx-js/mdx@3.1.1)(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.14)(lucide-react@0.577.0(react@19.2.4))(next@16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.4.3)
@@ -99,15 +72,33 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.14)
+      eslint:
+        specifier: ^10.1.0
+        version: 10.1.0(jiti@2.6.1)
+      prettier:
+        specifier: ^3.8.1
+        version: 3.8.1
+      prettier-plugin-organize-imports:
+        specifier: ^4.3.0
+        version: 4.3.0(prettier@3.8.1)(typescript@5.9.3)
+      prettier-plugin-tailwindcss:
+        specifier: ^0.7.2
+        version: 0.7.2(prettier-plugin-organize-imports@4.3.0(prettier@3.8.1)(typescript@5.9.3))(prettier@3.8.1)
+      rimraf:
+        specifier: ^6.1.3
+        version: 6.1.3
+      turbo:
+        specifier: ^2.8.20
+        version: 2.8.20
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
 
   packages/console:
     dependencies:
-      '@workspace/utility':
-        specifier: workspace:*
-        version: link:../utility
+      '@obvia/utilities':
+        specifier: ^1.0.3
+        version: 1.0.3(next@16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next:
         specifier: ^16.2.0
         version: 16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -133,9 +124,9 @@ importers:
 
   packages/interface:
     dependencies:
-      '@workspace/utility':
-        specifier: workspace:*
-        version: link:../utility
+      '@obvia/utilities':
+        specifier: ^1.0.3
+        version: 1.0.3(next@16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -203,43 +194,6 @@ importers:
       tw-animate-css:
         specifier: ^1.4.0
         version: 1.4.0
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-
-  packages/utility:
-    dependencies:
-      class-variance-authority:
-        specifier: ^0.7.1
-        version: 0.7.1
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      kleur:
-        specifier: ^4.1.5
-        version: 4.1.5
-      next:
-        specifier: ^16.2.0
-        version: 16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      react:
-        specifier: ^19.2.4
-        version: 19.2.4
-      react-dom:
-        specifier: ^19.2.4
-        version: 19.2.4(react@19.2.4)
-      tailwind-merge:
-        specifier: ^3.5.0
-        version: 3.5.0
-    devDependencies:
-      '@obvia/presets':
-        specifier: ^0.0.2
-        version: 0.0.2
-      '@types/node':
-        specifier: ^25.5.0
-        version: 25.5.0
-      '@types/react':
-        specifier: ^19.2.14
-        version: 19.2.14
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -699,6 +653,26 @@ packages:
 
   '@obvia/presets@0.0.2':
     resolution: {integrity: sha512-zRkyDcLnfuqwrOGaTeW/2F/AMBR5JinWL8LCdBHM1w10BdyvkrEKGeKJTN4tLS18Nz8w/CusrTwN4pZ59CjQbA==}
+
+  '@obvia/utilities@1.0.3':
+    resolution: {integrity: sha512-HnoKsNo1m8rCiHyF2X3WctmM8lY1olnQx7AB4yHzycHqRUMCbFX9cf9PfwSdYPfk5Svpu8i0duSrshhWca24NQ==}
+    peerDependencies:
+      next: ^16.2.0
+      nuxt: ^4
+      react: ^19.2.4
+      react-dom: ^19.2.4
+      vue: ^3
+    peerDependenciesMeta:
+      next:
+        optional: true
+      nuxt:
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+      vue:
+        optional: true
 
   '@orama/orama@3.1.18':
     resolution: {integrity: sha512-a61ljmRVVyG5MC/698C8/FfFDw5a8LOIvyOLW5fztgUXqUpc1jOfQzOitSCbge657OgXXThmY3Tk8fpiDb4UcA==}
@@ -3235,6 +3209,17 @@ snapshots:
     optional: true
 
   '@obvia/presets@0.0.2': {}
+
+  '@obvia/utilities@1.0.3(next@16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      class-variance-authority: 0.7.1
+      clsx: 2.1.1
+      kleur: 4.1.5
+      tailwind-merge: 3.5.0
+    optionalDependencies:
+      next: 16.2.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@orama/orama@3.1.18': {}
 

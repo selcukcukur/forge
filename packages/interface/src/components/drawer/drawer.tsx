@@ -3,7 +3,7 @@
 import type { ComponentProps } from "react"
 import { Drawer as Primitive } from "vaul"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 export function Drawer({
   ...props

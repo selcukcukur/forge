@@ -3,7 +3,7 @@
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 import { MinusIcon } from "lucide-react"
 
 export function InputOTP({

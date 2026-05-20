@@ -4,7 +4,7 @@
   "description"       : "My digital workshop — a living lab for ideas, experiments, and open-source creations.",
   "keywords"          : ["react","open-source","laboratory","playground","typescript","creative-coding","nextjs","innovation","ideas","exploration","experiments","prototypes","personal-projects","tailwindcss","radix-ui"],
   "license"           : "MIT",
-  "homepage"          : "https://selcukcukur.me/",
+  "homepage"          : "https://selcukcukur.me",
   "version"           : "0.0.1",
 
   "author"            : {
@@ -19,18 +19,35 @@
   },
 
   "scripts"           : {
-    "build"         : "turbo build",
-    "start"         : "turbo start",
-    "dev"           : "turbo dev",
-    "lint"          : "turbo lint",
-    "clean"         : "turbo clean && rimraf node_modules dist .turbo",
-    "test"          : "turbo test",
-    "format"        : "prettier --write \"**/*.{ts,tsx,md}\"",
-    "script"        : "pnpm --filter web script"
+    "build"             : "next build",
+    "dev"               : "next dev --hostname selcukcukur.dev --experimental-https --experimental-https-key ./certificate/selcukcukur-key.pem --experimental-https-cert ./certificate/selcukcukur.pem --turbopack --port 443",
+    "clean"             : "rimraf node_modules dist .next .turbo",
+    "lint"              : "next lint",
+    "start"             : "next server",
+    "test"              : "vitest -no-file-parallelism --bail=1",
+    "script"            : "tsx ./scripts/run.ts"
   },
 
+  "dependencies"      : {
+    "@workspace/interface"    : "workspace:*",
+    "@obvia/utilities"        : "^1.0.3",
+    "@vercel/analytics"       : "^2.0.1",
+    "next"                    : "catalog:base",
+    "react"                   : "catalog:base",
+    "react-dom"               : "catalog:base",
+    "fumadocs-core"           : "^16.8.12",
+    "fumadocs-mdx"            : "^15.0.7",
+    "swr"                     : "^2.4.1",
+    "lucide-react"            : "^0.577.0",
+    "jotai"                   : "^2.18.1",
+    "zod"                     : "^4"
+  },
   "devDependencies"   : {
     "@obvia/presets"                    : "^0.0.2",
+    "@types/node"             : "catalog:type",
+    "@types/react"            : "catalog:type",
+    "@types/react-dom"        : "catalog:type",
+    "@types/mdx"              : "^2.0.13",
     "eslint"                            : "^10.1.0",
     "prettier"                          : "^3.8.1",
     "prettier-plugin-organize-imports"  : "^4.3.0",

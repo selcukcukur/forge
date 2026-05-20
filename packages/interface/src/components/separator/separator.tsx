@@ -3,7 +3,7 @@
 import type { ComponentProps } from "react"
 import { Separator as SeparatorPrimitive } from "radix-ui"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 export function Separator({
   className,

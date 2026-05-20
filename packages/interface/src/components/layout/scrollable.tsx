@@ -3,7 +3,7 @@
 import type { ComponentProps } from "react"
 import { ScrollArea as Primitive } from "radix-ui"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 export function Scrollable({
   className,

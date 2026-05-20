@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react"
 
-import { cn } from "@workspace/utility"
+import { cn } from "@obvia/utilities"
 
 export function Textarea({
   className,
