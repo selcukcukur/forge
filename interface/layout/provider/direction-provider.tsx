@@ -2,7 +2,7 @@
 
 import type { PropsWithChildren } from "react"
 
-import { type Direction, DirectionContext } from "../hooks"
+import { type Direction, DirectionContext } from "@hooks/theme/use-direction"
 
 /**
  * Provides direction context (**LTR** or **RTL**) to all child elements

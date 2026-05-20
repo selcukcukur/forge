@@ -4,13 +4,13 @@ import type { Metadata } from "next"
 import { createMetadata } from "@obvia/utilities/next"
 
 // Document
-import Document from "document"
+import Document from "@interface/document"
 
 // Provider
-import { RootProviders } from "provider"
+import { RootProviders } from "@interface/layout/provider"
 
 // Layout
-import WebShell from "web-shell"
+import WebShell from "@interface/layout/web-shell"
 
 /**
  * Generated metadata for the entire web application

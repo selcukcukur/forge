@@ -1,4 +1,4 @@
-import type { SocialAccount } from "../library/type/site"
+import type { SocialAccount } from "@library/type/site"
 
 import {
   Facebook,
@@ -8,7 +8,7 @@ import {
   YouTube,
   Linkedin,
   Rss
-} from "@workspace/interface/icons"
+} from "@interface/icons"
 
 /**
  * Company social media accounts list

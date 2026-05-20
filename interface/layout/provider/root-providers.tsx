@@ -3,10 +3,8 @@
 import type { PropsWithChildren } from "react"
 import { Analytics } from "@vercel/analytics/next"
 
-import {
-  DirectionProvider,
-  ThemeProvider
-} from "@workspace/interface"
+import { DirectionProvider } from "./direction-provider"
+import { ThemeProvider } from "./theme-provider"
 
 /**
  * Composes all core application providers into a single root wrapper

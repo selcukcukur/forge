@@ -1,7 +1,7 @@
 import type { ReactNode } from "react"
 
-import { Header } from "interface/layout/section/header/header"
-import {Footer} from "interface/layout/section/footer/footer";
+import { Header } from "@interface/layout/section/header/header"
+import {Footer} from "@interface/layout/section/footer/footer";
 
 /**
  * Web shell component for the web application

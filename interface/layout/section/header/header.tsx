@@ -6,8 +6,8 @@ import { cn } from "@obvia/utilities"
 
 import Link from "next/link"
 
-import { socialAccounts } from "../../../../config/site"
-import {Navigation, NavigationMobile} from "@workspace/interface";
+import { socialAccounts } from "@config/site"
+import { Navigation, NavigationMobile } from "@interface/components"
 
 const navItems = [
   { label: "Home", href: "/" },

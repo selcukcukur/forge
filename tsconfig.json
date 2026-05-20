@@ -20,7 +20,8 @@
       "@server"        : ["./library/server/index.ts"],
       "@server/*"      : ["./library/server/*"],
       "@scripts"       : ["./scripts/index.ts"],
-      "@scripts/*"     : ["./scripts/*"]
+      "@scripts/*"     : ["./scripts/*"],
+      "@styles/*"      : ["./styles/*"]
     }
   },
   "include"         : ["**/*.ts", "**/*.tsx", "**/*.d.ts",

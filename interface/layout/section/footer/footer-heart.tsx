@@ -8,7 +8,7 @@ import {
   DrawerContent,
   DrawerTitle,
   DrawerHeader
-} from "@workspace/interface"
+} from "@interface/components"
 
 export function FooterHeart() {
   // State to track whether the "like" button has been pressed

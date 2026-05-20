@@ -1,7 +1,7 @@
-import { socialAccounts } from "../../../../config/site"
+import { socialAccounts } from "@config/site"
 import { ExternalLink } from "lucide-react"
 
-import type { SocialAccount } from "../../../../library/type/site"
+import type { SocialAccount } from "@library/type/site"
 
 export function FooterHero() {
   return (

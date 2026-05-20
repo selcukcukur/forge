@@ -5,8 +5,7 @@ import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import { cn } from "@obvia/utilities"
 import { Mail, Rss, Search, Tag, TrendingUp } from "lucide-react"
-import { Input } from "@workspace/interface"
-import { Button } from "@workspace/interface"
+import { Input, Button } from "@interface/components"
 
 const categories = [
   { name: "All Posts", count: 12, slug: "all" },

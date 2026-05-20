@@ -1,10 +1,10 @@
 import type { PropsWithChildren } from "react"
 
 // Typography
-import { geist, geistMono, spaceGrotesk } from "@workspace/interface/fonts"
+import { geist, geistMono, spaceGrotesk } from "@library/fonts"
 
 // Styling
-import "@workspace/interface/globals.css"
+import "@styles/globals.css"
 
 // Utility
 import { APP_LOCALE, APP_LOCALES, cn } from "@obvia/utilities/next"

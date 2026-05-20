@@ -1,7 +1,7 @@
 
 import { cn } from "@obvia/utilities"
 import { ArrowRight, Clock, Calendar } from "lucide-react"
-import { Avatar, AvatarFallback, AvatarImage } from "@workspace/interface"
+import { Avatar, AvatarFallback, AvatarImage } from "@interface/components"
 import Link from "next/link"
 
 import type { PostEntry } from "@library/content"

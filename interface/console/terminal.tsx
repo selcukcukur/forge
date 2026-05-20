@@ -6,10 +6,10 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput
-} from "@workspace/interface"
+} from "@interface/components"
 import { cn, cv, type VariantOf } from "@obvia/utilities"
 
-import { useTerminal } from "../../hooks/console/use-terminal"
+import { useTerminal } from "@hooks/console/use-terminal"
 
 export const actionVariants = cv(
   "rounded-full transition-colors cursor-pointer",

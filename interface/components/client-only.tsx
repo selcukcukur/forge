@@ -3,7 +3,7 @@
 import type { ReactNode, PropsWithChildren } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
-import { useClientReady } from "@workspace/interface"
+import { useClientReady } from "@hooks/core/use-client-ready"
 
 // Define the props for the client only component
 type ClientOnlyProps = PropsWithChildren<{
