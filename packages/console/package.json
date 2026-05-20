@@ -26,7 +26,7 @@
   "types"             : "./dist/index.d.ts",
 
   "dependencies"      : {
-    "@workspace/utility"        : "workspace:*",
+    "@obvia/utilities"          : "^1.0.3",
     "next"                      : "catalog:base",
     "react"                     : "catalog:base",
     "react-dom"                 : "catalog:base"

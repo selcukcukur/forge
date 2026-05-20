@@ -1,0 +1,119 @@
+"use client"
+
+import type { ComponentProps } from "react"
+import { Drawer as Primitive } from "vaul"
+
+import { cn } from "@obvia/utilities"
+
+export function Drawer({
+  ...props
+}: ComponentProps<typeof Primitive.Root>) {
+  return <Primitive.Root data-slot="drawer" {...props} />
+}
+
+export function DrawerTrigger({
+  ...props
+}: ComponentProps<typeof Primitive.Trigger>) {
+  return <Primitive.Trigger data-slot="drawer-trigger" {...props} />
+}
+
+export function DrawerPortal({
+  ...props
+}: ComponentProps<typeof Primitive.Portal>) {
+  return <Primitive.Portal data-slot="drawer-portal" {...props} />
+}
+
+export function DrawerClose({
+  ...props
+}: ComponentProps<typeof Primitive.Close>) {
+  return <Primitive.Close data-slot="drawer-close" {...props} />
+}
+
+export function DrawerOverlay({
+  className,
+  ...props
+}: ComponentProps<typeof Primitive.Overlay>) {
+  return (
+    <Primitive.Overlay
+      data-slot="drawer-overlay"
+      className={cn("data-open:animate-in data-closed:animate-out data-closed:fade-out-0 data-open:fade-in-0 bg-black/10 supports-backdrop-filter:backdrop-blur-xs fixed inset-0 z-50", className)}
+      {...props}
+    />
+  )
+}
+
+export function DrawerContent({
+  className,
+  children,
+  ...props
+}: ComponentProps<typeof Primitive.Content>) {
+  return (
+    <DrawerPortal data-slot="drawer-portal">
+      <DrawerOverlay />
+      <Primitive.Content
+        data-slot="drawer-content"
+        className={cn(
+          "bg-background flex h-auto flex-col text-sm data-[vaul-drawer-direction=bottom]:inset-x-0 data-[vaul-drawer-direction=bottom]:bottom-0 data-[vaul-drawer-direction=bottom]:mt-24 data-[vaul-drawer-direction=bottom]:max-h-[80vh] data-[vaul-drawer-direction=bottom]:rounded-t-xl data-[vaul-drawer-direction=bottom]:border-t data-[vaul-drawer-direction=left]:inset-y-0 data-[vaul-drawer-direction=left]:left-0 data-[vaul-drawer-direction=left]:w-3/4 data-[vaul-drawer-direction=left]:rounded-r-xl data-[vaul-drawer-direction=left]:border-r data-[vaul-drawer-direction=right]:inset-y-0 data-[vaul-drawer-direction=right]:right-0 data-[vaul-drawer-direction=right]:w-3/4 data-[vaul-drawer-direction=right]:rounded-l-xl data-[vaul-drawer-direction=right]:border-l data-[vaul-drawer-direction=top]:inset-x-0 data-[vaul-drawer-direction=top]:top-0 data-[vaul-drawer-direction=top]:mb-24 data-[vaul-drawer-direction=top]:max-h-[80vh] data-[vaul-drawer-direction=top]:rounded-b-xl data-[vaul-drawer-direction=top]:border-b border-border data-[vaul-drawer-direction=left]:sm:max-w-sm data-[vaul-drawer-direction=right]:sm:max-w-sm group/drawer-content fixed z-50",
+          className
+        )}
+        {...props}
+      >
+        <div className="bg-muted mt-4 h-1 w-25 rounded-full mx-auto hidden shrink-0 group-data-[vaul-drawer-direction=bottom]/drawer-content:block" />
+
+        {children}
+      </Primitive.Content>
+    </DrawerPortal>
+  )
+}
+
+export function DrawerHeader({
+  className,
+  ...props
+}: ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="drawer-header"
+      className={cn("gap-0.5 p-4 group-data-[vaul-drawer-direction=bottom]/drawer-content:text-center group-data-[vaul-drawer-direction=top]/drawer-content:text-center md:gap-0.5 md:text-left flex flex-col", className)}
+      {...props}
+    />
+  )
+}
+
+export function DrawerFooter({
+  className,
+  ...props
+}: ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="drawer-footer"
+      className={cn("gap-2 p-4 mt-auto flex flex-col", className)}
+      {...props}
+    />
+  )
+}
+
+export function DrawerTitle({
+  className,
+  ...props
+}: ComponentProps<typeof Primitive.Title>) {
+  return (
+    <Primitive.Title
+      data-slot="drawer-title"
+      className={cn("text-foreground text-base font-medium", className)}
+      {...props}
+    />
+  )
+}
+
+export function DrawerDescription({
+  className,
+  ...props
+}: ComponentProps<typeof Primitive.Description>) {
+  return (
+    <Primitive.Description
+      data-slot="drawer-description"
+      className={cn("text-muted-foreground text-sm", className)}
+      {...props}
+    />
+  )
+}
