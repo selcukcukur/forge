@@ -1,9 +1,11 @@
 import {
   type NextFetchEvent,
-  type NextRequest
+  type NextRequest,
+  NextResponse
 } from "next/server"
 
-import { parse, resolveProxy } from "./library/proxy/utility"
+import { APP_LOCALE, HOSTNAMES, parseRequest, resolveProxy } from "@obvia/utilities/next"
+import { proxyConfig } from "@library/proxy/config"
 
 /** Proxy configuration */
 export const config = {
@@ -22,7 +24,7 @@ export const config = {
 }
 
 /**
- * Root proxy for handling all incoming requests
+ * Root middleware for handling all incoming requests
  *
  * **Parameters**
  * - `request` — Next.js incoming request object (used for request inspection and manipulation)
@@ -30,16 +32,20 @@ export const config = {
  *
  * **Usage**
  * ```ts
- * export async function webProxy(request, event, context) {
- *   // Internally rewrite the request to serve content from `/selcukcukur.me{fullPath}`
- *   return NextResponse.rewrite(new URL(`/selcukcukur.me{fullPath}`, request.url))
+ * export async function sryliusProxy(request, event, context) {
+ *   // Internally rewrite the request to serve content from `/srylius.com{fullPath}`
+ *   return NextResponse.rewrite(new URL(`/srylius.com{fullPath}`, request.url))
  * }
  * ```
  */
 export default async function proxy(request: NextRequest, event: NextFetchEvent) {
   // Parse the incoming request to extract host, path, and subdomain information
-  const context = parse(request)
+  const context = await parseRequest<NextRequest, NextResponse>(request, {
+    defaultLocale     : APP_LOCALE,
+    supportedLocales  : new Set([]),
+    hostnames         : HOSTNAMES
+  })
 
   // Resolve middleware based on parsed request metadata
-  return resolveProxy(request, event, context)
+  return resolveProxy(request, event, context, proxyConfig)
 }

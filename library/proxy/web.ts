@@ -3,10 +3,9 @@ import {
   type NextRequest,
   NextResponse
 } from "next/server"
-
 import {
   type RequestContext
-} from "library/proxy/utility"
+} from "@obvia/utilities/next"
 
 /**
  * Web middleware for handling web domain requests
@@ -39,5 +38,7 @@ export async function webProxy(
   context: RequestContext
 ): Promise<NextResponse> {
   // Internally rewrite the request to serve content from web domain
-  return NextResponse.rewrite(new URL(`/selcukcukur.me${context.fullPath}`, request.url))
+  return NextResponse.rewrite(new URL(`/selcukcukur.me${context.fullPath}`, request.url), {
+    headers: context.response?.headers
+  })
 }
